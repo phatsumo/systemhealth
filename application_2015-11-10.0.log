@@ -1,0 +1,55 @@
+2015-11-10 14:00:34,769 932  [main] DEBUG c.r.s.data.ServerHealthStat - Hello world
+2015-11-10 14:04:31,628 169  [main] DEBUG c.r.s.data.ServerHealthStat [ServerHealthStat.java:20] - Hello world
+2015-11-10 16:01:37,093 83905 [main] DEBUG c.rtn.systemhealth.util.JSONHelper [JSONHelper.java:36] - ServerName = AURD-AI168889
+2015-11-10 16:05:47,833 334645 [main] DEBUG c.rtn.systemhealth.util.JSONHelper [JSONHelper.java:37] - ServerName = AURD-AI168889
+2015-11-10 16:05:49,855 336667 [main] INFO  c.rtn.systemhealth.util.JSONHelper [null:-1] - ServerName = null
+2015-11-10 16:22:29,762 26741 [main] ERROR c.rtn.systemhealth.util.JSONHelper [JSONHelper.java:54] - Failed to unmarshall json file: serverhealth.json
+com.fasterxml.jackson.core.JsonParseException: Unexpected character (',' (code 44)): expected a valid value (number, String, array, object, 'true', 'false' or 'null')
+ at [Source: serverhealth.json; line: 6, column: 45]
+	at com.fasterxml.jackson.core.JsonParser._constructError(JsonParser.java:1486) ~[jackson-core-2.5.0.jar:2.5.0]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportError(ParserMinimalBase.java:518) ~[jackson-core-2.5.0.jar:2.5.0]
+	at com.fasterxml.jackson.core.base.ParserMinimalBase._reportUnexpectedChar(ParserMinimalBase.java:447) ~[jackson-core-2.5.0.jar:2.5.0]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser._handleUnexpectedValue(UTF8StreamJsonParser.java:2486) ~[jackson-core-2.5.0.jar:2.5.0]
+	at com.fasterxml.jackson.core.json.UTF8StreamJsonParser.nextFieldName(UTF8StreamJsonParser.java:1020) ~[jackson-core-2.5.0.jar:2.5.0]
+	at com.fasterxml.jackson.databind.deser.std.BaseNodeDeserializer.deserializeObject(JsonNodeDeserializer.java:219) ~[jackson-databind-2.6.2.jar:2.6.2]
+	at com.fasterxml.jackson.databind.deser.std.BaseNodeDeserializer.deserializeArray(JsonNodeDeserializer.java:270) ~[jackson-databind-2.6.2.jar:2.6.2]
+	at com.fasterxml.jackson.databind.deser.std.BaseNodeDeserializer.deserializeObject(JsonNodeDeserializer.java:227) ~[jackson-databind-2.6.2.jar:2.6.2]
+	at com.fasterxml.jackson.databind.deser.std.JsonNodeDeserializer.deserialize(JsonNodeDeserializer.java:69) ~[jackson-databind-2.6.2.jar:2.6.2]
+	at com.fasterxml.jackson.databind.deser.std.JsonNodeDeserializer.deserialize(JsonNodeDeserializer.java:15) ~[jackson-databind-2.6.2.jar:2.6.2]
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:3731) ~[jackson-databind-2.6.2.jar:2.6.2]
+	at com.fasterxml.jackson.databind.ObjectMapper.readTree(ObjectMapper.java:2322) ~[jackson-databind-2.6.2.jar:2.6.2]
+	at com.rtn.systemhealth.util.JSONHelper.toServerHealthStat(JSONHelper.java:36) [bin/:na]
+	at com.rtn.systemhealth.util.JSONHelper.main(JSONHelper.java:64) [bin/:na]
+2015-11-10 16:42:10,425 7674 [main] ERROR c.rtn.systemhealth.util.JSONHelper [JSONHelper.java:56] - Failed to unmarshall json file: serverhealth.json
+com.fasterxml.jackson.databind.JsonMappingException: No content to map due to end-of-input
+ at [Source: ; line: 1, column: 1]
+	at com.fasterxml.jackson.databind.JsonMappingException.from(JsonMappingException.java:148) ~[jackson-databind-2.6.2.jar:2.6.2]
+	at com.fasterxml.jackson.databind.ObjectMapper._initForReading(ObjectMapper.java:3776) ~[jackson-databind-2.6.2.jar:2.6.2]
+	at com.fasterxml.jackson.databind.ObjectMapper._readMapAndClose(ObjectMapper.java:3716) ~[jackson-databind-2.6.2.jar:2.6.2]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:2762) ~[jackson-databind-2.6.2.jar:2.6.2]
+	at com.rtn.systemhealth.util.JSONHelper.toServerHealthStat(JSONHelper.java:51) [bin/:na]
+	at com.rtn.systemhealth.util.JSONHelper.main(JSONHelper.java:66) [bin/:na]
+2015-11-10 16:42:22,579 19828 [main] INFO  c.rtn.systemhealth.util.JSONHelper [JSONHelper.java:68] - ServerName = AURD-AI168889
+2015-11-10 16:50:05,865 96015 [main] DEBUG c.rtn.systemhealth.util.JSONHelper [JSONHelper.java:53] - null
+2015-11-10 16:50:09,676 99826 [main] DEBUG c.rtn.systemhealth.util.JSONHelper [JSONHelper.java:53] - null
+2015-11-10 16:50:12,247 102397 [main] DEBUG c.rtn.systemhealth.util.JSONHelper [JSONHelper.java:53] - null
+2015-11-10 16:51:04,265 154415 [main] DEBUG c.rtn.systemhealth.util.JSONHelper [JSONHelper.java:53] - 
+2015-11-10 16:51:06,465 156615 [main] DEBUG c.rtn.systemhealth.util.JSONHelper [JSONHelper.java:53] - 
+2015-11-10 16:58:31,828 601978 [main] DEBUG c.rtn.systemhealth.util.JSONHelper [JSONHelper.java:56] - deviceID = C:
+2015-11-10 16:58:34,063 604213 [main] DEBUG c.rtn.systemhealth.util.JSONHelper [JSONHelper.java:57] - totalSizeKB = 488384532
+2015-11-10 16:58:34,818 604968 [main] DEBUG c.rtn.systemhealth.util.JSONHelper [JSONHelper.java:58] - freeSizeKB = 422020048
+2015-11-10 16:58:35,366 605516 [main] DEBUG c.rtn.systemhealth.util.JSONHelper [JSONHelper.java:59] - percentDiskFree = 86
+2015-11-10 16:58:37,350 607500 [main] DEBUG c.rtn.systemhealth.util.JSONHelper [JSONHelper.java:56] - deviceID = G:
+2015-11-10 16:58:37,839 607989 [main] DEBUG c.rtn.systemhealth.util.JSONHelper [JSONHelper.java:57] - totalSizeKB = 219343512
+2015-11-10 16:58:38,109 608259 [main] DEBUG c.rtn.systemhealth.util.JSONHelper [JSONHelper.java:58] - freeSizeKB = 15146576
+2015-11-10 16:58:38,339 608489 [main] DEBUG c.rtn.systemhealth.util.JSONHelper [JSONHelper.java:59] - percentDiskFree = 6
+2015-11-10 16:58:39,062 609212 [main] DEBUG c.rtn.systemhealth.util.JSONHelper [JSONHelper.java:56] - deviceID = H:
+2015-11-10 16:58:39,327 609477 [main] DEBUG c.rtn.systemhealth.util.JSONHelper [JSONHelper.java:57] - totalSizeKB = 3140961984
+2015-11-10 16:58:39,560 609710 [main] DEBUG c.rtn.systemhealth.util.JSONHelper [JSONHelper.java:58] - freeSizeKB = 49190456
+2015-11-10 16:58:39,775 609925 [main] DEBUG c.rtn.systemhealth.util.JSONHelper [JSONHelper.java:59] - percentDiskFree = 1
+2015-11-10 16:58:40,415 610565 [main] DEBUG c.rtn.systemhealth.util.JSONHelper [JSONHelper.java:56] - deviceID = Z:
+2015-11-10 16:58:40,623 610773 [main] DEBUG c.rtn.systemhealth.util.JSONHelper [JSONHelper.java:57] - totalSizeKB = 41941980
+2015-11-10 16:58:40,842 610992 [main] DEBUG c.rtn.systemhealth.util.JSONHelper [JSONHelper.java:58] - freeSizeKB = 14109048
+2015-11-10 16:58:41,050 611200 [main] DEBUG c.rtn.systemhealth.util.JSONHelper [JSONHelper.java:59] - percentDiskFree = 33
+2015-11-10 16:58:41,686 611836 [main] DEBUG c.rtn.systemhealth.util.JSONHelper [JSONHelper.java:66] - ServerName = AURD-AI168889
+2015-11-10 17:21:31,053 18681 [main] DEBUG c.rtn.systemhealth.util.JSONHelper [JSONHelper.java:55] - Disks: [{"deviceID":"C:","totalSizeKB":488384532,"freeSizeKB":422020048,"percentDiskFree":86.41},{"deviceID":"G:","totalSizeKB":219343512,"freeSizeKB":15146576,"percentDiskFree":6.91},{"deviceID":"H:","totalSizeKB":3140961984,"freeSizeKB":49190456,"percentDiskFree":1.57},{"deviceID":"Z:","totalSizeKB":41941980,"freeSizeKB":14109048,"percentDiskFree":33.64}]

@@ -1,0 +1,11 @@
+{
+     "serverName": "AURD-AI168889",
+     "disks": [
+         {"deviceID": "C:", "totalSizeKB": 488384532, "freeSizeKB": 420383844, "percentDiskFree": 86.08},
+         {"deviceID": "G:", "totalSizeKB": 219343512, "freeSizeKB": 15145880, "percentDiskFree": 6.91},
+         {"deviceID": "H:", "totalSizeKB": 3140961984, "freeSizeKB": 45866296, "percentDiskFree": 1.46},
+         {"deviceID": "Z:", "totalSizeKB": 41941980, "freeSizeKB": 13982724, "percentDiskFree": 33.34}
+     ],
+     "serverUpTimeDays": 0.863,
+     "percentCPUUsage": 5.497
+}
