@@ -99,9 +99,5 @@ public class ServerHealthStat {
 		sb.append("percentCPUUsage="+percentCPUUsage+"\n");
 		return sb.toString();
 	}
-	
-	public static void main(String[] args) {
-		LOGGER.debug("Hello world");
-	}
 
 }

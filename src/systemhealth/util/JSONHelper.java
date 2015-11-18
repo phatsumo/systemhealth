@@ -2,16 +2,13 @@ package systemhealth.util;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import systemhealth.data.Disk;
 import systemhealth.data.ServerHealthStat;
 
 public class JSONHelper {
@@ -33,20 +30,23 @@ public class JSONHelper {
 		
 		ServerHealthStat stat = new ServerHealthStat();
 		try {
-			JsonNode on = objectMapper.readTree(jsonFile);
 			
-			String serverName = on.get("serverName").textValue();
-			float percentCPUUsage = on.get("percentCPUUsage").floatValue();
-			float serverUpTimeDays = on.get("serverUpTimeDays").floatValue();
+			stat = objectMapper.readValue(jsonFile, new TypeReference<ServerHealthStat>() {});
 			
-			//parse "disks" section
-			String disksAsString = on.path("disks").toString();						
-			List<Disk> diskList = objectMapper.readValue(disksAsString, new TypeReference<List<Disk>>() { });
-			
-			stat.setDisks(diskList);
-			stat.setServerName(serverName);
-			stat.setPercentCPUUsage(percentCPUUsage);
-			stat.setServerUpTimeDays(serverUpTimeDays);			
+			//keep the commented out section below, it illustrates an alternate way for deserializing the json file to java object.
+//			JsonNode on = objectMapper.readTree(jsonFile);
+//			String serverName = on.get("serverName").textValue();
+//			float percentCPUUsage = on.get("percentCPUUsage").floatValue();
+//			float serverUpTimeDays = on.get("serverUpTimeDays").floatValue();
+//			
+//			//parse "disks" section
+//			String disksAsString = on.path("disks").toString();						
+//			List<Disk> diskList = objectMapper.readValue(disksAsString, new TypeReference<List<Disk>>() { });
+//			
+//			stat.setDisks(diskList);
+//			stat.setServerName(serverName);
+//			stat.setPercentCPUUsage(percentCPUUsage);
+//			stat.setServerUpTimeDays(serverUpTimeDays);			
 
 		} catch (IOException e) {
 			LOGGER.error("Failed to unmarshall json file: " + jsonFile, e);
