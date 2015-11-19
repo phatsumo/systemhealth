@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<serverThresholdConfigData>
+    <serverThreshold>
+        <serverName>AURD-AI168889</serverName>
+        <warningDiskFreePercent>0.1</warningDiskFreePercent>
+        <criticalDiskFreePercent>0.05</criticalDiskFreePercent>
+        <warningCPUUsagePercent>0.8</warningCPUUsagePercent>
+        <criticalCPUUsagePercent>0.95</criticalCPUUsagePercent>
+    </serverThreshold>
+    <serverThreshold>
+        <serverName>ABC</serverName>
+        <warningDiskFreePercent>0.1</warningDiskFreePercent>
+        <criticalDiskFreePercent>0.05</criticalDiskFreePercent>
+        <warningCPUUsagePercent>0.8</warningCPUUsagePercent>
+        <criticalCPUUsagePercent>0.95</criticalCPUUsagePercent>
+    </serverThreshold>
+</serverThresholdConfigData>

@@ -1,21 +1,4 @@
-2015-11-12 15:12:02,280 514  [main] INFO  systemhealth.util.JSONHelper [JSONHelper.java:62] - Server health stat: serverName=AURD-AI168889
-deviceID=C:, totalSizeKB=488384532, freeSizeKB=420383844, percentDiskFree=86.08
-deviceID=G:, totalSizeKB=219343512, freeSizeKB=15145880, percentDiskFree=6.91
-deviceID=H:, totalSizeKB=3140961984, freeSizeKB=45866296, percentDiskFree=1.46
-deviceID=Z:, totalSizeKB=41941980, freeSizeKB=13982724, percentDiskFree=33.34
-serverUpTimeDays=0.863,
-percentCPUUsage=5.497
-
-2015-11-12 16:30:25,213 406  [main] INFO  systemhealth.util.JSONHelper [JSONHelper.java:62] - 
-Server health stat: serverName=AURD-AI168889
-deviceID=C:, totalSizeKB=488384532, freeSizeKB=420383844, percentDiskFree=86.08
-deviceID=G:, totalSizeKB=219343512, freeSizeKB=15145880, percentDiskFree=6.91
-deviceID=H:, totalSizeKB=3140961984, freeSizeKB=45866296, percentDiskFree=1.46
-deviceID=Z:, totalSizeKB=41941980, freeSizeKB=13982724, percentDiskFree=33.34
-serverUpTimeDays=0.863,
-percentCPUUsage=5.497
-
-2015-11-12 16:30:39,799 405  [main] INFO  systemhealth.util.JSONHelper [JSONHelper.java:62] - 
+2015-11-19 09:38:32,629 639  [main] INFO  systemhealth.util.JSONHelperTest [JSONHelperTest.java:68] - 
 Server health stat: 
 serverName=AURD-AI168889
 deviceID=C:, totalSizeKB=488384532, freeSizeKB=420383844, percentDiskFree=86.08
@@ -25,7 +8,7 @@ deviceID=Z:, totalSizeKB=41941980, freeSizeKB=13982724, percentDiskFree=33.34
 serverUpTimeDays=0.863,
 percentCPUUsage=5.497
 
-2015-11-18 16:01:43,120 655  [main] INFO  systemhealth.util.JSONHelper [JSONHelper.java:62] - 
+2015-11-19 09:40:30,559 671  [main] INFO  systemhealth.util.JSONHelperTest [JSONHelperTest.java:72] - 
 Server health stat: 
 serverName=AURD-AI168889
 deviceID=C:, totalSizeKB=488384532, freeSizeKB=420383844, percentDiskFree=86.08
@@ -34,4 +17,69 @@ deviceID=H:, totalSizeKB=3140961984, freeSizeKB=45866296, percentDiskFree=1.46
 deviceID=Z:, totalSizeKB=41941980, freeSizeKB=13982724, percentDiskFree=33.34
 serverUpTimeDays=0.863,
 percentCPUUsage=5.497
+
+2015-11-19 13:50:29,121 23883 [main] INFO  systemhealth.data.ThresholdTest [ThresholdTest.java:62] - Threshold object: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<threshold>
+    <serverName>XYZ</serverName>
+    <warningDiskFreePercent>0.1</warningDiskFreePercent>
+    <criticalDiskFreePercent>0.05</criticalDiskFreePercent>
+    <warningCPUUsagePercent>0.8</warningCPUUsagePercent>
+    <criticalCPUUsagePercent>0.95</criticalCPUUsagePercent>
+</threshold>
+
+2015-11-19 14:05:43,536 609  [main] INFO  systemhealth.data.JAXBTest [JAXBTest.java:76] - Threshold object: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<thresholdConfigData>
+    <thresholds>
+        <threshold>
+            <serverName>XYZ</serverName>
+            <warningDiskFreePercent>0.1</warningDiskFreePercent>
+            <criticalDiskFreePercent>0.05</criticalDiskFreePercent>
+            <warningCPUUsagePercent>0.8</warningCPUUsagePercent>
+            <criticalCPUUsagePercent>0.95</criticalCPUUsagePercent>
+        </threshold>
+        <threshold>
+            <serverName>ABC</serverName>
+            <warningDiskFreePercent>0.1</warningDiskFreePercent>
+            <criticalDiskFreePercent>0.05</criticalDiskFreePercent>
+            <warningCPUUsagePercent>0.8</warningCPUUsagePercent>
+            <criticalCPUUsagePercent>0.95</criticalCPUUsagePercent>
+        </threshold>
+    </thresholds>
+</thresholdConfigData>
+
+2015-11-19 14:13:10,385 660  [main] INFO  systemhealth.data.JAXBTest [JAXBTest.java:76] - Threshold object: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<thresholdConfigData>
+    <threshold>
+        <serverName>XYZ</serverName>
+        <warningDiskFreePercent>0.1</warningDiskFreePercent>
+        <criticalDiskFreePercent>0.05</criticalDiskFreePercent>
+        <warningCPUUsagePercent>0.8</warningCPUUsagePercent>
+        <criticalCPUUsagePercent>0.95</criticalCPUUsagePercent>
+    </threshold>
+    <threshold>
+        <serverName>ABC</serverName>
+        <warningDiskFreePercent>0.1</warningDiskFreePercent>
+        <criticalDiskFreePercent>0.05</criticalDiskFreePercent>
+        <warningCPUUsagePercent>0.8</warningCPUUsagePercent>
+        <criticalCPUUsagePercent>0.95</criticalCPUUsagePercent>
+    </threshold>
+</thresholdConfigData>
+
+2015-11-19 14:16:48,202 630  [main] INFO  systemhealth.data.JAXBTest [JAXBTest.java:76] - Threshold object: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<serverThresholdConfigData>
+    <serverThreshold>
+        <serverName>XYZ</serverName>
+        <warningDiskFreePercent>0.1</warningDiskFreePercent>
+        <criticalDiskFreePercent>0.05</criticalDiskFreePercent>
+        <warningCPUUsagePercent>0.8</warningCPUUsagePercent>
+        <criticalCPUUsagePercent>0.95</criticalCPUUsagePercent>
+    </serverThreshold>
+    <serverThreshold>
+        <serverName>ABC</serverName>
+        <warningDiskFreePercent>0.1</warningDiskFreePercent>
+        <criticalDiskFreePercent>0.05</criticalDiskFreePercent>
+        <warningCPUUsagePercent>0.8</warningCPUUsagePercent>
+        <criticalCPUUsagePercent>0.95</criticalCPUUsagePercent>
+    </serverThreshold>
+</serverThresholdConfigData>
 

@@ -11,22 +11,21 @@ import systemhealth.data.ServerHealthStat;
  *
  */
 public class SystemHealthAnalyzer implements Runnable {
-	
-	private ServerHealthStat serverHealthStat;
-	
-	
-	public SystemHealthAnalyzer(ServerHealthStat stat) {
-		serverHealthStat = stat;
-	}
-	
-	
-	/* (non-Javadoc)
-	 * @see java.lang.Runnable#run()
-	 */
-	@Override
-	public void run() {
-		
 
-	}
+    private ServerHealthStat serverHealthStat;
+
+    public SystemHealthAnalyzer(ServerHealthStat stat) {
+        serverHealthStat = stat;
+    }
+
+    /*
+     * (non-Javadoc)
+     * 
+     * @see java.lang.Runnable#run()
+     */
+    @Override
+    public void run() {
+
+    }
 
 }
