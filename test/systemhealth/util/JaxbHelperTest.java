@@ -1,61 +1,79 @@
-package systemhealth.data;
+package systemhealth.util;
 
-import java.io.StringWriter;
+import java.io.InputStream;
 
-import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
-import javax.xml.bind.Marshaller;
 
-import org.junit.After;
 import org.junit.AfterClass;
-import org.junit.Before;
+import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-public class JAXBTest {
+import systemhealth.data.ServerThreshold;
+import systemhealth.data.ServerThresholdConfigData;
+
+/**
+ *
+ * @author 1062992
+ *
+ */
+public class JaxbHelperTest {
 
     private static final Logger LOGGER = LoggerFactory
-            .getLogger(JAXBTest.class);
+            .getLogger(JaxbHelperTest.class);
 
-    private static JAXBContext context = null;
-    private static Marshaller marshaller = null;
+    private static InputStream inputStream = null;
 
+    /**
+     * @throws Exception
+     */
     @BeforeClass
     public static void setUpBeforeClass() throws Exception {
-        context = JAXBContext.newInstance(ServerThresholdConfigData.class);
-        marshaller = context.createMarshaller();
-        marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
-    }
-
-    @AfterClass
-    public static void tearDownAfterClass() throws Exception {
-    }
-
-    @Before
-    public void setUp() throws Exception {
-    }
-
-    @After
-    public void tearDown() throws Exception {
+        inputStream = JaxbHelperTest.class
+                .getResourceAsStream("/thresholds.xml");
     }
 
     /**
-     * Test serialization of Threshold obj
+     *
+     * @throws Exception
+     */
+    @AfterClass
+    public static void tearDownAfterClass() throws Exception {
+        if (inputStream != null) {
+            inputStream.close();
+            inputStream = null;
+        }
+    }
+
+    /**
      *
      * @throws JAXBException
      */
     @Test
-    public void test() throws JAXBException {
+    public void testUnmarshal() throws JAXBException {
 
+        ServerThresholdConfigData serverThresholdConfigData = JaxbHelper
+                .unmarshal(inputStream, ServerThresholdConfigData.class);
+
+        Assert.assertNotNull(serverThresholdConfigData);
+
+    }
+
+    /**
+     *
+     * @throws JAXBException
+     */
+    @Test
+    public void testMarshal() throws JAXBException {
         ServerThresholdConfigData tcd = new ServerThresholdConfigData();
 
         ServerThreshold threshold1 = new ServerThreshold();
         threshold1.setServerName("XYZ");
         threshold1.setCriticalCPUUsagePercent(0.95f);
         threshold1.setCriticalDiskFreePercent(0.05f); // 5% free is critical
-                                                      // level
+        // level
         threshold1.setWarningCPUUsagePercent(0.80f);
         threshold1.setWarningDiskFreePercent(0.10f);
 
@@ -63,18 +81,17 @@ public class JAXBTest {
         threshold2.setServerName("ABC");
         threshold2.setCriticalCPUUsagePercent(0.95f);
         threshold2.setCriticalDiskFreePercent(0.05f); // 5% free is critical
-                                                      // level
+        // level
         threshold2.setWarningCPUUsagePercent(0.80f);
         threshold2.setWarningDiskFreePercent(0.10f);
 
         tcd.getThresholds().add(threshold1);
         tcd.getThresholds().add(threshold2);
 
-        StringWriter writer = new StringWriter();
-        marshaller.marshal(tcd, writer);
+        String marshalledString = JaxbHelper.marshal(tcd,
+                ServerThresholdConfigData.class);
 
-        LOGGER.info("Threshold object: " + writer.toString());
-
+        LOGGER.info("Threshold object: " + marshalledString);
     }
 
 }
