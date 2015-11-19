@@ -114,4 +114,21 @@ public class ServerThreshold {
     public void setCriticalCPUUsagePercent(float criticalCPUUsagePercent) {
         this.criticalCPUUsagePercent = criticalCPUUsagePercent;
     }
+
+    /**
+     * Copy method. Returns a new instance that is a copy of this instance.
+     * 
+     * @return copy of this instance
+     */
+    public ServerThreshold copy() {
+        ServerThreshold st = new ServerThreshold();
+
+        st.setCriticalCPUUsagePercent(this.getCriticalCPUUsagePercent());
+        st.setCriticalDiskFreePercent(this.criticalDiskFreePercent);
+        st.setServerName(this.serverName);
+        st.setWarningCPUUsagePercent(this.warningCPUUsagePercent);
+        st.setWarningDiskFreePercent(this.warningDiskFreePercent);
+
+        return st;
+    }
 }

@@ -17,6 +17,8 @@ import java.nio.file.Paths;
 import java.util.Date;
 import java.util.Properties;
 
+import javax.xml.bind.JAXBException;
+
 import org.quartz.DisallowConcurrentExecution;
 import org.quartz.Job;
 import org.quartz.JobDetail;
@@ -30,7 +32,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import systemhealth.data.ServerHealthStat;
+import systemhealth.data.ServerThresholdConfigData;
 import systemhealth.util.JSONHelper;
+import systemhealth.util.JaxbHelper;
 import systemhealth.util.SystemHealthMgr;
 
 /**
@@ -49,6 +53,8 @@ public class ScannerJob implements Job {
 
     private static String fileExtensionToFilter = "";
 
+    private ServerThresholdConfigData thresholdConfigData = null;
+
     /**
      * Default constructor.
      */
@@ -65,10 +71,15 @@ public class ScannerJob implements Job {
             LOGGER.debug(this + " File extension filter: "
                     + fileExtensionToFilter);
 
-            // Lets read the threshold file each time this gets execute (so that
+            // Lets read the threshold config file each time this gets execute
+            // (so that
             // users can change threshold levels on the fly.)
 
-        } catch (IOException e) {
+            thresholdConfigData = JaxbHelper.unmarshal(
+                    ScannerJob.class.getResourceAsStream("/thresholds.xml"),
+                    ServerThresholdConfigData.class);
+
+        } catch (JAXBException | IOException e) {
             LOGGER.error("Failed to initialize ScannerJob", e);
         }
     }
@@ -86,7 +97,6 @@ public class ScannerJob implements Job {
         DirectoryStream<Path> ds = scan(directoryToScan);
 
         // 2. foreach $file in list of files: parse and do something
-
         for (Path p : ds) {
             File fileToProcess = p.toFile();
             LOGGER.debug("File to process: " + fileToProcess.getAbsolutePath());
@@ -97,7 +107,7 @@ public class ScannerJob implements Job {
 
             // create system healh analyzer
             SystemHealthAnalyzer shAnalyzer = new SystemHealthAnalyzer(
-                    serverHealthStat);
+                    serverHealthStat, thresholdConfigData.copy());
 
             // execute job on thread pool
             SystemHealthMgr.getInstance().submitJob(shAnalyzer);

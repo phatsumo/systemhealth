@@ -12,6 +12,8 @@ import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
 
 /**
+ * Utility class that uses Generics to marshall and unmarshall JAXB objects.
+ * 
  * @author 1062992
  *
  */

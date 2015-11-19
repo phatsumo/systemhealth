@@ -19,6 +19,29 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ServerThresholdConfigData {
 
+    /**
+     * Default constructor.
+     */
+    public ServerThresholdConfigData() {
+
+    }
+
+    /**
+     * Copy method to return a copy of this instance.
+     *
+     * @return a copy of this instance
+     * @throws CloneNotSupportedException
+     */
+    public ServerThresholdConfigData copy() {
+        ServerThresholdConfigData c = new ServerThresholdConfigData();
+
+        for (ServerThreshold st : thresholds) {
+            c.getThresholds().add(st.copy());
+        }
+
+        return c;
+    }
+
     // @XmlElementWrapper(name = "thresholds")
     @XmlElement(name = "serverThreshold")
     private List<ServerThreshold> thresholds = new ArrayList<ServerThreshold>();

@@ -6,10 +6,10 @@ import java.io.IOException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import systemhealth.data.ServerHealthStat;
+
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
-
-import systemhealth.data.ServerHealthStat;
 
 /**
  * @author 1062992
@@ -23,7 +23,7 @@ public class JSONHelper {
     /**
      * Parses the JSON file and binds it to {@link ServerHealthStat}. Returns
      * ServerHealthStat.
-     * 
+     *
      * @param jsonFile
      *            the JSON file to parse
      * @return the ServerHealthStat
@@ -36,12 +36,12 @@ public class JSONHelper {
 
         ObjectMapper objectMapper = new ObjectMapper();
 
-        ServerHealthStat stat = new ServerHealthStat();
+        ServerHealthStat stat = null;
         try {
 
             stat = objectMapper.readValue(jsonFile,
                     new TypeReference<ServerHealthStat>() {
-                    });
+            });
 
             // keep the commented out section below, it illustrates an alternate
             // way for deserializing the json file to java object.
