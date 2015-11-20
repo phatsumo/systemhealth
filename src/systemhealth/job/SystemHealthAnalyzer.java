@@ -6,7 +6,10 @@ package systemhealth.job;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+<<<<<<< HEAD
 import systemhealth.data.Disk;
+=======
+>>>>>>> branch 'master' of https://github.com/phatsumo/systemhealth
 import systemhealth.data.ServerHealthStat;
 import systemhealth.data.ServerThreshold;
 import systemhealth.data.ServerThresholdConfigData;
@@ -21,9 +24,14 @@ import systemhealth.data.ServerThresholdConfigData;
  */
 public class SystemHealthAnalyzer implements Runnable {
 
+<<<<<<< HEAD
     private static final Logger LOGGER = LoggerFactory
             .getLogger(SystemHealthAnalyzer.class);
 
+=======
+    private static final Logger LOGGER = LoggerFactory.getLogger(SystemHealthAnalyzer.class);
+    
+>>>>>>> branch 'master' of https://github.com/phatsumo/systemhealth
     private ServerHealthStat serverHealthStat;
 
     private ServerThresholdConfigData thresholdData;
@@ -48,6 +56,7 @@ public class SystemHealthAnalyzer implements Runnable {
     @Override
     public void run() {
         LOGGER.debug("SystemHealthAnalyzer.run()");
+<<<<<<< HEAD
 
         // check each field
         ServerThreshold serverThreshold = thresholdData
@@ -102,6 +111,8 @@ public class SystemHealthAnalyzer implements Runnable {
 
         }
 
+=======
+>>>>>>> branch 'master' of https://github.com/phatsumo/systemhealth
     }
 
 }
