@@ -3,6 +3,9 @@
  */
 package systemhealth.job;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import systemhealth.data.ServerHealthStat;
 import systemhealth.data.ServerThresholdConfigData;
 
@@ -13,6 +16,8 @@ import systemhealth.data.ServerThresholdConfigData;
  */
 public class SystemHealthAnalyzer implements Runnable {
 
+    private static final Logger LOGGER = LoggerFactory.getLogger(SystemHealthAnalyzer.class);
+    
     private ServerHealthStat serverHealthStat;
 
     private ServerThresholdConfigData thresholdData;
@@ -30,7 +35,7 @@ public class SystemHealthAnalyzer implements Runnable {
      */
     @Override
     public void run() {
-
+        LOGGER.debug("SystemHealthAnalyzer.run()");
     }
 
 }
