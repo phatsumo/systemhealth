@@ -1,5 +1,5 @@
 /**
- * 
+ *
  */
 package systemhealth.util;
 
@@ -17,19 +17,25 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
+ * Utility class to send email using Javamail.
+ *
  * @author 1062992
  *
  */
 public class EmailNotifier {
-    
-    private static final Logger LOGGER = LoggerFactory.getLogger(EmailNotifier.class);
-    
-    final String username = "xxxx";
-    final String password = "xxxx";
-    
+
+    private static final Logger LOGGER = LoggerFactory
+            .getLogger(EmailNotifier.class);
+
+    String username = "xxxx";
+    String password = "xxxx";
+
     Session session = null;
     Message message = null;
-    
+
+    /**
+     * Default constructor
+     */
     public EmailNotifier() {
         Properties props = new Properties();
         props.put("mail.smtp.auth", "true");
@@ -38,27 +44,29 @@ public class EmailNotifier {
         props.put("mail.smtp.port", "587");
 
         session = Session.getInstance(props, new javax.mail.Authenticator() {
+            @Override
             protected PasswordAuthentication getPasswordAuthentication() {
                 return new PasswordAuthentication(username, password);
             }
         });
-        
+
     }
-    
+
     /**
-     * 
+     *
      * @param msg
      * @param from
      * @param recipients
      * @param subject
      */
-    public void sendMail(String msg, String from, String recipients, String subject) {
+    public void sendMail(String msg, String from, String recipients,
+            String subject) {
         try {
 
             Message message = new MimeMessage(session);
             message.setFrom(new InternetAddress(from));
             message.addRecipients(Message.RecipientType.TO,
-                InternetAddress.parse(recipients));
+                    InternetAddress.parse(recipients));
             message.setSubject(subject);
             message.setText(msg);
 

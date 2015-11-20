@@ -61,4 +61,26 @@ public class ServerThresholdConfigData {
         this.thresholds = thresholds;
     }
 
+    /**
+     * Find the {@link ServerThreshold} given the server name.
+     * 
+     * @param serverName
+     * @return the ServerThreshold
+     */
+    public ServerThreshold findByServerName(String serverName) {
+        if (serverName == null || serverName.isEmpty()) {
+            return null;
+        }
+
+        ServerThreshold serverThreshold = null;
+        for (ServerThreshold st : thresholds) {
+            if (serverName.equalsIgnoreCase(st.getServerName())) {
+                serverThreshold = st;
+                break;
+            }
+        }
+
+        return serverThreshold;
+    }
+
 }

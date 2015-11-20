@@ -1,85 +1,660 @@
-2015-11-19 09:38:32,629 639  [main] INFO  systemhealth.util.JSONHelperTest [JSONHelperTest.java:68] - 
-Server health stat: 
-serverName=AURD-AI168889
-deviceID=C:, totalSizeKB=488384532, freeSizeKB=420383844, percentDiskFree=86.08
-deviceID=G:, totalSizeKB=219343512, freeSizeKB=15145880, percentDiskFree=6.91
-deviceID=H:, totalSizeKB=3140961984, freeSizeKB=45866296, percentDiskFree=1.46
-deviceID=Z:, totalSizeKB=41941980, freeSizeKB=13982724, percentDiskFree=33.34
-serverUpTimeDays=0.863,
-percentCPUUsage=5.497
+2015-11-20 14:57:15,065 608  [main] INFO  org.quartz.impl.StdSchedulerFactory [StdSchedulerFactory.java:1172] - Using default implementation for ThreadExecutor
+2015-11-20 14:57:15,112 655  [main] INFO  o.quartz.core.SchedulerSignalerImpl [SchedulerSignalerImpl.java:61] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2015-11-20 14:57:15,112 655  [main] INFO  org.quartz.core.QuartzScheduler [QuartzScheduler.java:240] - Quartz Scheduler v.2.2.2 created.
+2015-11-20 14:57:15,127 670  [main] INFO  org.quartz.simpl.RAMJobStore [RAMJobStore.java:155] - RAMJobStore initialized.
+2015-11-20 14:57:15,127 670  [main] INFO  org.quartz.core.QuartzScheduler [QuartzScheduler.java:305] - Scheduler meta-data: Quartz Scheduler (v2.2.2) 'MyScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 3 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
 
-2015-11-19 09:40:30,559 671  [main] INFO  systemhealth.util.JSONHelperTest [JSONHelperTest.java:72] - 
-Server health stat: 
-serverName=AURD-AI168889
-deviceID=C:, totalSizeKB=488384532, freeSizeKB=420383844, percentDiskFree=86.08
-deviceID=G:, totalSizeKB=219343512, freeSizeKB=15145880, percentDiskFree=6.91
-deviceID=H:, totalSizeKB=3140961984, freeSizeKB=45866296, percentDiskFree=1.46
-deviceID=Z:, totalSizeKB=41941980, freeSizeKB=13982724, percentDiskFree=33.34
-serverUpTimeDays=0.863,
-percentCPUUsage=5.497
+2015-11-20 14:57:15,127 670  [main] INFO  org.quartz.impl.StdSchedulerFactory [StdSchedulerFactory.java:1327] - Quartz scheduler 'MyScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2015-11-20 14:57:15,127 670  [main] INFO  org.quartz.impl.StdSchedulerFactory [StdSchedulerFactory.java:1331] - Quartz scheduler version: 2.2.2
+2015-11-20 14:57:15,143 686  [main] INFO  systemhealth.job.ScannerJob [ScannerJob.java:168] - group1.scannerjob will run at: Fri Nov 20 14:57:15 MST 2015 and repeat: -1 times, every 60 seconds
+2015-11-20 14:57:15,143 686  [main] INFO  systemhealth.job.ScannerJob [ScannerJob.java:173] - ------- Starting Scheduler ----------------
+2015-11-20 14:57:15,143 686  [main] INFO  org.quartz.core.QuartzScheduler [QuartzScheduler.java:575] - Scheduler MyScheduler_$_NON_CLUSTERED started.
+2015-11-20 14:57:15,143 686  [main] INFO  systemhealth.job.ScannerJob [ScannerJob.java:182] - ------- Started Scheduler -----------------
+2015-11-20 14:57:15,159 702  [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:70] - systemhealth.job.ScannerJob@1141b51d Directory to scan: H:\jsonfiles
+2015-11-20 14:57:15,159 702  [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:71] - systemhealth.job.ScannerJob@1141b51d File extension filter: json
+2015-11-20 14:57:15,252 795  [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:95] - executing scanner job...
+2015-11-20 14:57:15,253 796  [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:132] - Path = H:\jsonfiles\serverhealth.json
+2015-11-20 14:57:15,253 796  [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:102] - File to process: H:\jsonfiles\serverhealth.json
+2015-11-20 14:57:15,456 999  [pool-1-thread-1] DEBUG s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:50] - SystemHealthAnalyzer.run()
+2015-11-20 14:58:57,296 577  [main] INFO  org.quartz.impl.StdSchedulerFactory [StdSchedulerFactory.java:1172] - Using default implementation for ThreadExecutor
+2015-11-20 14:58:57,359 640  [main] INFO  o.quartz.core.SchedulerSignalerImpl [SchedulerSignalerImpl.java:61] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2015-11-20 14:58:57,375 656  [main] INFO  org.quartz.core.QuartzScheduler [QuartzScheduler.java:240] - Quartz Scheduler v.2.2.2 created.
+2015-11-20 14:58:57,375 656  [main] INFO  org.quartz.simpl.RAMJobStore [RAMJobStore.java:155] - RAMJobStore initialized.
+2015-11-20 14:58:57,375 656  [main] INFO  org.quartz.core.QuartzScheduler [QuartzScheduler.java:305] - Scheduler meta-data: Quartz Scheduler (v2.2.2) 'MyScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 3 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
 
-2015-11-19 13:50:29,121 23883 [main] INFO  systemhealth.data.ThresholdTest [ThresholdTest.java:62] - Threshold object: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<threshold>
-    <serverName>XYZ</serverName>
-    <warningDiskFreePercent>0.1</warningDiskFreePercent>
-    <criticalDiskFreePercent>0.05</criticalDiskFreePercent>
-    <warningCPUUsagePercent>0.8</warningCPUUsagePercent>
-    <criticalCPUUsagePercent>0.95</criticalCPUUsagePercent>
-</threshold>
+2015-11-20 14:58:57,375 656  [main] INFO  org.quartz.impl.StdSchedulerFactory [StdSchedulerFactory.java:1327] - Quartz scheduler 'MyScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2015-11-20 14:58:57,375 656  [main] INFO  org.quartz.impl.StdSchedulerFactory [StdSchedulerFactory.java:1331] - Quartz scheduler version: 2.2.2
+2015-11-20 14:58:57,391 672  [main] INFO  systemhealth.job.ScannerJob [ScannerJob.java:168] - group1.scannerjob will run at: Fri Nov 20 14:58:57 MST 2015 and repeat: -1 times, every 60 seconds
+2015-11-20 14:58:57,391 672  [main] INFO  systemhealth.job.ScannerJob [ScannerJob.java:173] - ------- Starting Scheduler ----------------
+2015-11-20 14:58:57,391 672  [main] INFO  org.quartz.core.QuartzScheduler [QuartzScheduler.java:575] - Scheduler MyScheduler_$_NON_CLUSTERED started.
+2015-11-20 14:58:57,391 672  [main] INFO  systemhealth.job.ScannerJob [ScannerJob.java:182] - ------- Started Scheduler -----------------
+2015-11-20 14:58:57,406 687  [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:70] - systemhealth.job.ScannerJob@6fd483f0 Directory to scan: H:\jsonfiles
+2015-11-20 14:58:57,406 687  [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:71] - systemhealth.job.ScannerJob@6fd483f0 File extension filter: json
+2015-11-20 14:58:57,484 765  [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:95] - executing scanner job...
+2015-11-20 14:58:57,500 781  [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:132] - Path = H:\jsonfiles\serverhealth.json
+2015-11-20 14:58:57,500 781  [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:102] - File to process: H:\jsonfiles\serverhealth.json
+2015-11-20 14:58:57,687 968  [pool-1-thread-1] DEBUG s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:50] - SystemHealthAnalyzer.run()
+2015-11-20 14:59:57,403 60684 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:70] - systemhealth.job.ScannerJob@1fedb20e Directory to scan: H:\jsonfiles
+2015-11-20 14:59:57,403 60684 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:71] - systemhealth.job.ScannerJob@1fedb20e File extension filter: json
+2015-11-20 14:59:57,436 60717 [MyScheduler_Worker-2] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:95] - executing scanner job...
+2015-11-20 14:59:57,436 60717 [MyScheduler_Worker-2] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:132] - Path = H:\jsonfiles\serverhealth.json
+2015-11-20 14:59:57,436 60717 [MyScheduler_Worker-2] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:102] - File to process: H:\jsonfiles\serverhealth.json
+2015-11-20 14:59:57,451 60732 [pool-1-thread-2] DEBUG s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:50] - SystemHealthAnalyzer.run()
+2015-11-20 15:01:37,419 686  [main] INFO  org.quartz.impl.StdSchedulerFactory [StdSchedulerFactory.java:1172] - Using default implementation for ThreadExecutor
+2015-11-20 15:01:37,483 750  [main] INFO  o.quartz.core.SchedulerSignalerImpl [SchedulerSignalerImpl.java:61] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2015-11-20 15:01:37,483 750  [main] INFO  org.quartz.core.QuartzScheduler [QuartzScheduler.java:240] - Quartz Scheduler v.2.2.2 created.
+2015-11-20 15:01:37,483 750  [main] INFO  org.quartz.simpl.RAMJobStore [RAMJobStore.java:155] - RAMJobStore initialized.
+2015-11-20 15:01:37,483 750  [main] INFO  org.quartz.core.QuartzScheduler [QuartzScheduler.java:305] - Scheduler meta-data: Quartz Scheduler (v2.2.2) 'MyScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 3 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
 
-2015-11-19 14:05:43,536 609  [main] INFO  systemhealth.data.JAXBTest [JAXBTest.java:76] - Threshold object: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<thresholdConfigData>
-    <thresholds>
-        <threshold>
-            <serverName>XYZ</serverName>
-            <warningDiskFreePercent>0.1</warningDiskFreePercent>
-            <criticalDiskFreePercent>0.05</criticalDiskFreePercent>
-            <warningCPUUsagePercent>0.8</warningCPUUsagePercent>
-            <criticalCPUUsagePercent>0.95</criticalCPUUsagePercent>
-        </threshold>
-        <threshold>
-            <serverName>ABC</serverName>
-            <warningDiskFreePercent>0.1</warningDiskFreePercent>
-            <criticalDiskFreePercent>0.05</criticalDiskFreePercent>
-            <warningCPUUsagePercent>0.8</warningCPUUsagePercent>
-            <criticalCPUUsagePercent>0.95</criticalCPUUsagePercent>
-        </threshold>
-    </thresholds>
-</thresholdConfigData>
+2015-11-20 15:01:37,483 750  [main] INFO  org.quartz.impl.StdSchedulerFactory [StdSchedulerFactory.java:1327] - Quartz scheduler 'MyScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2015-11-20 15:01:37,498 765  [main] INFO  org.quartz.impl.StdSchedulerFactory [StdSchedulerFactory.java:1331] - Quartz scheduler version: 2.2.2
+2015-11-20 15:01:37,514 781  [main] INFO  systemhealth.job.ScannerJob [ScannerJob.java:168] - group1.scannerjob will run at: Fri Nov 20 15:01:37 MST 2015 and repeat: -1 times, every 60 seconds
+2015-11-20 15:01:37,514 781  [main] INFO  systemhealth.job.ScannerJob [ScannerJob.java:173] - ------- Starting Scheduler ----------------
+2015-11-20 15:01:37,514 781  [main] INFO  org.quartz.core.QuartzScheduler [QuartzScheduler.java:575] - Scheduler MyScheduler_$_NON_CLUSTERED started.
+2015-11-20 15:01:37,514 781  [main] INFO  systemhealth.job.ScannerJob [ScannerJob.java:182] - ------- Started Scheduler -----------------
+2015-11-20 15:01:37,530 797  [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:70] - systemhealth.job.ScannerJob@2bde9d0c Directory to scan: H:\jsonfiles
+2015-11-20 15:01:37,530 797  [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:71] - systemhealth.job.ScannerJob@2bde9d0c File extension filter: json
+2015-11-20 15:01:37,623 890  [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:95] - executing scanner job...
+2015-11-20 15:01:37,639 906  [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:132] - Path = H:\jsonfiles\serverhealth.json
+2015-11-20 15:01:37,639 906  [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:102] - File to process: H:\jsonfiles\serverhealth.json
+2015-11-20 15:01:37,842 1109 [pool-1-thread-1] DEBUG s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:50] - SystemHealthAnalyzer.run()
+2015-11-20 15:02:37,511 60778 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:70] - systemhealth.job.ScannerJob@1df2666 Directory to scan: H:\jsonfiles
+2015-11-20 15:02:37,511 60778 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:71] - systemhealth.job.ScannerJob@1df2666 File extension filter: json
+2015-11-20 15:02:37,543 60810 [MyScheduler_Worker-2] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:95] - executing scanner job...
+2015-11-20 15:02:37,543 60810 [MyScheduler_Worker-2] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:132] - Path = H:\jsonfiles\serverhealth.json
+2015-11-20 15:02:37,543 60810 [MyScheduler_Worker-2] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:102] - File to process: H:\jsonfiles\serverhealth.json
+2015-11-20 15:02:37,559 60826 [pool-1-thread-2] DEBUG s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:50] - SystemHealthAnalyzer.run()
+2015-11-20 15:02:43,846 67113 [pool-1-thread-1] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:77] - DiskId C: disk percent free (86.080002) is below critical level (10.000000)
+2015-11-20 15:03:34,735 118002 [pool-1-thread-1] DEBUG s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:50] - SystemHealthAnalyzer.run()
+2015-11-20 15:03:37,512 120779 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:70] - systemhealth.job.ScannerJob@1dc4a520 Directory to scan: H:\jsonfiles
+2015-11-20 15:03:37,512 120779 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:71] - systemhealth.job.ScannerJob@1dc4a520 File extension filter: json
+2015-11-20 15:03:37,560 120827 [MyScheduler_Worker-3] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:95] - executing scanner job...
+2015-11-20 15:03:37,576 120843 [MyScheduler_Worker-3] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:132] - Path = H:\jsonfiles\serverhealth.json
+2015-11-20 15:03:37,576 120843 [MyScheduler_Worker-3] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:102] - File to process: H:\jsonfiles\serverhealth.json
+2015-11-20 15:03:37,576 120843 [pool-1-thread-3] DEBUG s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:50] - SystemHealthAnalyzer.run()
+2015-11-20 15:04:01,023 144290 [pool-1-thread-1] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId G: disk percent free (6.910000) is below warning level (10.000000)
+2015-11-20 15:04:04,658 147925 [pool-1-thread-1] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId H: disk percent free (1.570000) is below warning level (10.000000)
+2015-11-20 15:04:04,658 147925 [pool-1-thread-1] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:77] - DiskId H: disk percent free (1.570000) is below critical level (10.000000)
+2015-11-20 15:04:08,934 152201 [pool-1-thread-2] DEBUG s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:50] - SystemHealthAnalyzer.run()
+2015-11-20 15:04:21,929 165196 [pool-1-thread-2] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId G: disk percent free (6.910000) is below warning level (10.000000)
+2015-11-20 15:04:21,930 165197 [pool-1-thread-2] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId H: disk percent free (1.570000) is below warning level (10.000000)
+2015-11-20 15:04:21,930 165197 [pool-1-thread-2] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:77] - DiskId H: disk percent free (1.570000) is below critical level (10.000000)
+2015-11-20 15:04:24,957 168224 [pool-1-thread-3] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId G: disk percent free (6.910000) is below warning level (10.000000)
+2015-11-20 15:04:24,957 168224 [pool-1-thread-3] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId H: disk percent free (1.570000) is below warning level (10.000000)
+2015-11-20 15:04:24,958 168225 [pool-1-thread-3] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:77] - DiskId H: disk percent free (1.570000) is below critical level (10.000000)
+2015-11-20 15:04:37,500 180767 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:70] - systemhealth.job.ScannerJob@296c0e3b Directory to scan: H:\jsonfiles
+2015-11-20 15:04:37,500 180767 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:71] - systemhealth.job.ScannerJob@296c0e3b File extension filter: json
+2015-11-20 15:04:37,532 180799 [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:95] - executing scanner job...
+2015-11-20 15:04:37,548 180815 [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:132] - Path = H:\jsonfiles\serverhealth.json
+2015-11-20 15:04:37,548 180815 [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:102] - File to process: H:\jsonfiles\serverhealth.json
+2015-11-20 15:04:37,548 180815 [pool-1-thread-4] DEBUG s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:50] - SystemHealthAnalyzer.run()
+2015-11-20 15:04:37,548 180815 [pool-1-thread-4] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId G: disk percent free (6.910000) is below warning level (10.000000)
+2015-11-20 15:04:37,548 180815 [pool-1-thread-4] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId H: disk percent free (1.570000) is below warning level (10.000000)
+2015-11-20 15:04:37,548 180815 [pool-1-thread-4] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:77] - DiskId H: disk percent free (1.570000) is below critical level (10.000000)
+2015-11-20 15:05:37,498 240765 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:70] - systemhealth.job.ScannerJob@42bf0727 Directory to scan: H:\jsonfiles
+2015-11-20 15:05:37,498 240765 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:71] - systemhealth.job.ScannerJob@42bf0727 File extension filter: json
+2015-11-20 15:05:37,546 240813 [MyScheduler_Worker-2] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:95] - executing scanner job...
+2015-11-20 15:05:37,546 240813 [MyScheduler_Worker-2] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:132] - Path = H:\jsonfiles\serverhealth.json
+2015-11-20 15:05:37,546 240813 [MyScheduler_Worker-2] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:102] - File to process: H:\jsonfiles\serverhealth.json
+2015-11-20 15:05:37,577 240844 [pool-1-thread-5] DEBUG s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:50] - SystemHealthAnalyzer.run()
+2015-11-20 15:05:37,577 240844 [pool-1-thread-5] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId G: disk percent free (6.910000) is below warning level (10.000000)
+2015-11-20 15:05:37,577 240844 [pool-1-thread-5] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId H: disk percent free (1.570000) is below warning level (10.000000)
+2015-11-20 15:05:37,608 240875 [pool-1-thread-5] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:77] - DiskId H: disk percent free (1.570000) is below critical level (10.000000)
+2015-11-20 15:06:37,528 300795 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:70] - systemhealth.job.ScannerJob@4be2982 Directory to scan: H:\jsonfiles
+2015-11-20 15:06:37,528 300795 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:71] - systemhealth.job.ScannerJob@4be2982 File extension filter: json
+2015-11-20 15:06:37,560 300827 [MyScheduler_Worker-3] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:95] - executing scanner job...
+2015-11-20 15:06:37,560 300827 [MyScheduler_Worker-3] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:132] - Path = H:\jsonfiles\serverhealth.json
+2015-11-20 15:06:37,560 300827 [MyScheduler_Worker-3] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:102] - File to process: H:\jsonfiles\serverhealth.json
+2015-11-20 15:06:37,576 300843 [pool-1-thread-2] DEBUG s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:50] - SystemHealthAnalyzer.run()
+2015-11-20 15:06:37,576 300843 [pool-1-thread-2] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId G: disk percent free (6.910000) is below warning level (10.000000)
+2015-11-20 15:06:37,576 300843 [pool-1-thread-2] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId H: disk percent free (1.570000) is below warning level (10.000000)
+2015-11-20 15:06:37,576 300843 [pool-1-thread-2] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:77] - DiskId H: disk percent free (1.570000) is below critical level (10.000000)
+2015-11-20 15:07:37,510 360777 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:70] - systemhealth.job.ScannerJob@77476d0f Directory to scan: H:\jsonfiles
+2015-11-20 15:07:37,510 360777 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:71] - systemhealth.job.ScannerJob@77476d0f File extension filter: json
+2015-11-20 15:07:37,543 360810 [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:95] - executing scanner job...
+2015-11-20 15:07:37,558 360825 [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:132] - Path = H:\jsonfiles\serverhealth.json
+2015-11-20 15:07:37,558 360825 [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:102] - File to process: H:\jsonfiles\serverhealth.json
+2015-11-20 15:07:37,558 360825 [pool-1-thread-3] DEBUG s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:50] - SystemHealthAnalyzer.run()
+2015-11-20 15:07:37,558 360825 [pool-1-thread-3] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId G: disk percent free (6.910000) is below warning level (10.000000)
+2015-11-20 15:07:37,558 360825 [pool-1-thread-3] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId H: disk percent free (1.570000) is below warning level (10.000000)
+2015-11-20 15:07:37,574 360841 [pool-1-thread-3] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:77] - DiskId H: disk percent free (1.570000) is below critical level (10.000000)
+2015-11-20 15:08:37,509 420776 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:70] - systemhealth.job.ScannerJob@1dd0ed9c Directory to scan: H:\jsonfiles
+2015-11-20 15:08:37,509 420776 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:71] - systemhealth.job.ScannerJob@1dd0ed9c File extension filter: json
+2015-11-20 15:08:37,541 420808 [MyScheduler_Worker-2] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:95] - executing scanner job...
+2015-11-20 15:08:37,541 420808 [MyScheduler_Worker-2] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:132] - Path = H:\jsonfiles\serverhealth.json
+2015-11-20 15:08:37,556 420823 [MyScheduler_Worker-2] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:102] - File to process: H:\jsonfiles\serverhealth.json
+2015-11-20 15:08:37,556 420823 [pool-1-thread-1] DEBUG s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:50] - SystemHealthAnalyzer.run()
+2015-11-20 15:08:37,556 420823 [pool-1-thread-1] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId G: disk percent free (6.910000) is below warning level (10.000000)
+2015-11-20 15:08:37,556 420823 [pool-1-thread-1] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId H: disk percent free (1.570000) is below warning level (10.000000)
+2015-11-20 15:08:37,556 420823 [pool-1-thread-1] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:77] - DiskId H: disk percent free (1.570000) is below critical level (10.000000)
+2015-11-20 15:09:37,507 480774 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:70] - systemhealth.job.ScannerJob@311d863b Directory to scan: H:\jsonfiles
+2015-11-20 15:09:37,507 480774 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:71] - systemhealth.job.ScannerJob@311d863b File extension filter: json
+2015-11-20 15:09:37,539 480806 [MyScheduler_Worker-3] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:95] - executing scanner job...
+2015-11-20 15:09:37,539 480806 [MyScheduler_Worker-3] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:132] - Path = H:\jsonfiles\serverhealth.json
+2015-11-20 15:09:37,555 480822 [MyScheduler_Worker-3] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:102] - File to process: H:\jsonfiles\serverhealth.json
+2015-11-20 15:09:37,555 480822 [pool-1-thread-4] DEBUG s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:50] - SystemHealthAnalyzer.run()
+2015-11-20 15:09:37,555 480822 [pool-1-thread-4] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId G: disk percent free (6.910000) is below warning level (10.000000)
+2015-11-20 15:09:37,555 480822 [pool-1-thread-4] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId H: disk percent free (1.570000) is below warning level (10.000000)
+2015-11-20 15:09:37,555 480822 [pool-1-thread-4] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:77] - DiskId H: disk percent free (1.570000) is below critical level (10.000000)
+2015-11-20 15:10:37,505 540772 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:70] - systemhealth.job.ScannerJob@35935bfe Directory to scan: H:\jsonfiles
+2015-11-20 15:10:37,505 540772 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:71] - systemhealth.job.ScannerJob@35935bfe File extension filter: json
+2015-11-20 15:10:37,537 540804 [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:95] - executing scanner job...
+2015-11-20 15:10:37,553 540820 [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:132] - Path = H:\jsonfiles\serverhealth.json
+2015-11-20 15:10:37,553 540820 [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:102] - File to process: H:\jsonfiles\serverhealth.json
+2015-11-20 15:10:37,553 540820 [pool-1-thread-5] DEBUG s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:50] - SystemHealthAnalyzer.run()
+2015-11-20 15:10:37,553 540820 [pool-1-thread-5] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId G: disk percent free (6.910000) is below warning level (10.000000)
+2015-11-20 15:10:37,553 540820 [pool-1-thread-5] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId H: disk percent free (1.570000) is below warning level (10.000000)
+2015-11-20 15:10:37,553 540820 [pool-1-thread-5] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:77] - DiskId H: disk percent free (1.570000) is below critical level (10.000000)
+2015-11-20 15:11:37,503 600770 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:70] - systemhealth.job.ScannerJob@699eedb0 Directory to scan: H:\jsonfiles
+2015-11-20 15:11:37,503 600770 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:71] - systemhealth.job.ScannerJob@699eedb0 File extension filter: json
+2015-11-20 15:11:37,551 600818 [MyScheduler_Worker-2] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:95] - executing scanner job...
+2015-11-20 15:11:37,551 600818 [MyScheduler_Worker-2] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:132] - Path = H:\jsonfiles\serverhealth.json
+2015-11-20 15:11:37,551 600818 [MyScheduler_Worker-2] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:102] - File to process: H:\jsonfiles\serverhealth.json
+2015-11-20 15:11:37,567 600834 [pool-1-thread-2] DEBUG s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:50] - SystemHealthAnalyzer.run()
+2015-11-20 15:11:37,567 600834 [pool-1-thread-2] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId G: disk percent free (6.910000) is below warning level (10.000000)
+2015-11-20 15:11:37,582 600849 [pool-1-thread-2] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId H: disk percent free (1.570000) is below warning level (10.000000)
+2015-11-20 15:11:37,582 600849 [pool-1-thread-2] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:77] - DiskId H: disk percent free (1.570000) is below critical level (10.000000)
+2015-11-20 15:12:37,501 660768 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:70] - systemhealth.job.ScannerJob@4428af72 Directory to scan: H:\jsonfiles
+2015-11-20 15:12:37,501 660768 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:71] - systemhealth.job.ScannerJob@4428af72 File extension filter: json
+2015-11-20 15:12:37,534 660801 [MyScheduler_Worker-3] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:95] - executing scanner job...
+2015-11-20 15:12:37,534 660801 [MyScheduler_Worker-3] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:132] - Path = H:\jsonfiles\serverhealth.json
+2015-11-20 15:12:37,534 660801 [MyScheduler_Worker-3] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:102] - File to process: H:\jsonfiles\serverhealth.json
+2015-11-20 15:12:37,534 660801 [pool-1-thread-3] DEBUG s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:50] - SystemHealthAnalyzer.run()
+2015-11-20 15:12:37,534 660801 [pool-1-thread-3] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId G: disk percent free (6.910000) is below warning level (10.000000)
+2015-11-20 15:12:37,549 660816 [pool-1-thread-3] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId H: disk percent free (1.570000) is below warning level (10.000000)
+2015-11-20 15:12:37,549 660816 [pool-1-thread-3] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:77] - DiskId H: disk percent free (1.570000) is below critical level (10.000000)
+2015-11-20 15:13:37,500 720767 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:70] - systemhealth.job.ScannerJob@5bd06c41 Directory to scan: H:\jsonfiles
+2015-11-20 15:13:37,500 720767 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:71] - systemhealth.job.ScannerJob@5bd06c41 File extension filter: json
+2015-11-20 15:13:37,532 720799 [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:95] - executing scanner job...
+2015-11-20 15:13:37,532 720799 [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:132] - Path = H:\jsonfiles\serverhealth.json
+2015-11-20 15:13:37,532 720799 [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:102] - File to process: H:\jsonfiles\serverhealth.json
+2015-11-20 15:13:37,547 720814 [pool-1-thread-1] DEBUG s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:50] - SystemHealthAnalyzer.run()
+2015-11-20 15:13:37,547 720814 [pool-1-thread-1] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId G: disk percent free (6.910000) is below warning level (10.000000)
+2015-11-20 15:13:37,547 720814 [pool-1-thread-1] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId H: disk percent free (1.570000) is below warning level (10.000000)
+2015-11-20 15:13:37,547 720814 [pool-1-thread-1] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:77] - DiskId H: disk percent free (1.570000) is below critical level (10.000000)
+2015-11-20 15:14:37,513 780780 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:70] - systemhealth.job.ScannerJob@1be7cd9c Directory to scan: H:\jsonfiles
+2015-11-20 15:14:37,513 780780 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:71] - systemhealth.job.ScannerJob@1be7cd9c File extension filter: json
+2015-11-20 15:14:38,856 782123 [MyScheduler_Worker-2] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:95] - executing scanner job...
+2015-11-20 15:14:38,872 782139 [MyScheduler_Worker-2] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:132] - Path = H:\jsonfiles\serverhealth.json
+2015-11-20 15:14:38,872 782139 [MyScheduler_Worker-2] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:102] - File to process: H:\jsonfiles\serverhealth.json
+2015-11-20 15:14:38,873 782140 [pool-1-thread-4] DEBUG s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:50] - SystemHealthAnalyzer.run()
+2015-11-20 15:14:38,873 782140 [pool-1-thread-4] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId G: disk percent free (6.910000) is below warning level (10.000000)
+2015-11-20 15:14:38,873 782140 [pool-1-thread-4] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId H: disk percent free (1.570000) is below warning level (10.000000)
+2015-11-20 15:14:40,356 783623 [pool-1-thread-4] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:77] - DiskId H: disk percent free (1.570000) is below critical level (10.000000)
+2015-11-20 15:15:37,500 840767 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:70] - systemhealth.job.ScannerJob@5474fc80 Directory to scan: H:\jsonfiles
+2015-11-20 15:15:37,500 840767 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:71] - systemhealth.job.ScannerJob@5474fc80 File extension filter: json
+2015-11-20 15:15:37,532 840799 [MyScheduler_Worker-3] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:95] - executing scanner job...
+2015-11-20 15:15:37,548 840815 [MyScheduler_Worker-3] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:132] - Path = H:\jsonfiles\serverhealth.json
+2015-11-20 15:15:37,548 840815 [MyScheduler_Worker-3] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:102] - File to process: H:\jsonfiles\serverhealth.json
+2015-11-20 15:15:37,563 840830 [pool-1-thread-5] DEBUG s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:50] - SystemHealthAnalyzer.run()
+2015-11-20 15:15:37,563 840830 [pool-1-thread-5] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId G: disk percent free (6.910000) is below warning level (10.000000)
+2015-11-20 15:15:37,563 840830 [pool-1-thread-5] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId H: disk percent free (1.570000) is below warning level (10.000000)
+2015-11-20 15:15:37,563 840830 [pool-1-thread-5] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:77] - DiskId H: disk percent free (1.570000) is below critical level (10.000000)
+2015-11-20 15:16:37,498 900765 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:70] - systemhealth.job.ScannerJob@cb3f1a5 Directory to scan: H:\jsonfiles
+2015-11-20 15:16:37,498 900765 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:71] - systemhealth.job.ScannerJob@cb3f1a5 File extension filter: json
+2015-11-20 15:16:37,530 900797 [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:95] - executing scanner job...
+2015-11-20 15:16:37,530 900797 [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:132] - Path = H:\jsonfiles\serverhealth.json
+2015-11-20 15:16:37,530 900797 [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:102] - File to process: H:\jsonfiles\serverhealth.json
+2015-11-20 15:16:37,546 900813 [pool-1-thread-2] DEBUG s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:50] - SystemHealthAnalyzer.run()
+2015-11-20 15:16:37,546 900813 [pool-1-thread-2] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId G: disk percent free (6.910000) is below warning level (10.000000)
+2015-11-20 15:16:37,546 900813 [pool-1-thread-2] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId H: disk percent free (1.570000) is below warning level (10.000000)
+2015-11-20 15:16:37,546 900813 [pool-1-thread-2] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:77] - DiskId H: disk percent free (1.570000) is below critical level (10.000000)
+2015-11-20 15:17:37,512 960779 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:70] - systemhealth.job.ScannerJob@1a0fb222 Directory to scan: H:\jsonfiles
+2015-11-20 15:17:37,513 960780 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:71] - systemhealth.job.ScannerJob@1a0fb222 File extension filter: json
+2015-11-20 15:17:37,544 960811 [MyScheduler_Worker-2] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:95] - executing scanner job...
+2015-11-20 15:17:37,544 960811 [MyScheduler_Worker-2] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:132] - Path = H:\jsonfiles\serverhealth.json
+2015-11-20 15:17:37,560 960827 [MyScheduler_Worker-2] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:102] - File to process: H:\jsonfiles\serverhealth.json
+2015-11-20 15:17:37,560 960827 [pool-1-thread-3] DEBUG s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:50] - SystemHealthAnalyzer.run()
+2015-11-20 15:17:37,560 960827 [pool-1-thread-3] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId G: disk percent free (6.910000) is below warning level (10.000000)
+2015-11-20 15:17:37,560 960827 [pool-1-thread-3] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId H: disk percent free (1.570000) is below warning level (10.000000)
+2015-11-20 15:17:37,560 960827 [pool-1-thread-3] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:77] - DiskId H: disk percent free (1.570000) is below critical level (10.000000)
+2015-11-20 15:18:37,510 1020777 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:70] - systemhealth.job.ScannerJob@11dcbfe5 Directory to scan: H:\jsonfiles
+2015-11-20 15:18:37,510 1020777 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:71] - systemhealth.job.ScannerJob@11dcbfe5 File extension filter: json
+2015-11-20 15:18:37,542 1020809 [MyScheduler_Worker-3] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:95] - executing scanner job...
+2015-11-20 15:18:37,542 1020809 [MyScheduler_Worker-3] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:132] - Path = H:\jsonfiles\serverhealth.json
+2015-11-20 15:18:37,542 1020809 [MyScheduler_Worker-3] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:102] - File to process: H:\jsonfiles\serverhealth.json
+2015-11-20 15:18:37,558 1020825 [pool-1-thread-1] DEBUG s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:50] - SystemHealthAnalyzer.run()
+2015-11-20 15:18:37,558 1020825 [pool-1-thread-1] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId G: disk percent free (6.910000) is below warning level (10.000000)
+2015-11-20 15:18:37,558 1020825 [pool-1-thread-1] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId H: disk percent free (1.570000) is below warning level (10.000000)
+2015-11-20 15:18:37,558 1020825 [pool-1-thread-1] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:77] - DiskId H: disk percent free (1.570000) is below critical level (10.000000)
+2015-11-20 15:19:37,509 1080776 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:70] - systemhealth.job.ScannerJob@57cb5458 Directory to scan: H:\jsonfiles
+2015-11-20 15:19:37,509 1080776 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:71] - systemhealth.job.ScannerJob@57cb5458 File extension filter: json
+2015-11-20 15:19:37,541 1080808 [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:95] - executing scanner job...
+2015-11-20 15:19:37,556 1080823 [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:132] - Path = H:\jsonfiles\serverhealth.json
+2015-11-20 15:19:37,556 1080823 [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:102] - File to process: H:\jsonfiles\serverhealth.json
+2015-11-20 15:19:37,556 1080823 [pool-1-thread-4] DEBUG s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:50] - SystemHealthAnalyzer.run()
+2015-11-20 15:19:37,556 1080823 [pool-1-thread-4] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId G: disk percent free (6.910000) is below warning level (10.000000)
+2015-11-20 15:19:37,556 1080823 [pool-1-thread-4] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId H: disk percent free (1.570000) is below warning level (10.000000)
+2015-11-20 15:19:37,556 1080823 [pool-1-thread-4] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:77] - DiskId H: disk percent free (1.570000) is below critical level (10.000000)
+2015-11-20 15:20:37,507 1140774 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:70] - systemhealth.job.ScannerJob@17eb3e8 Directory to scan: H:\jsonfiles
+2015-11-20 15:20:37,507 1140774 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:71] - systemhealth.job.ScannerJob@17eb3e8 File extension filter: json
+2015-11-20 15:20:37,539 1140806 [MyScheduler_Worker-2] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:95] - executing scanner job...
+2015-11-20 15:20:37,539 1140806 [MyScheduler_Worker-2] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:132] - Path = H:\jsonfiles\serverhealth.json
+2015-11-20 15:20:37,539 1140806 [MyScheduler_Worker-2] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:102] - File to process: H:\jsonfiles\serverhealth.json
+2015-11-20 15:20:37,539 1140806 [pool-1-thread-5] DEBUG s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:50] - SystemHealthAnalyzer.run()
+2015-11-20 15:20:37,555 1140822 [pool-1-thread-5] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId G: disk percent free (6.910000) is below warning level (10.000000)
+2015-11-20 15:20:37,555 1140822 [pool-1-thread-5] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId H: disk percent free (1.570000) is below warning level (10.000000)
+2015-11-20 15:20:37,555 1140822 [pool-1-thread-5] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:77] - DiskId H: disk percent free (1.570000) is below critical level (10.000000)
+2015-11-20 15:21:37,505 1200772 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:70] - systemhealth.job.ScannerJob@69ae42b4 Directory to scan: H:\jsonfiles
+2015-11-20 15:21:37,505 1200772 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:71] - systemhealth.job.ScannerJob@69ae42b4 File extension filter: json
+2015-11-20 15:21:37,506 1200773 [MyScheduler_Worker-3] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:95] - executing scanner job...
+2015-11-20 15:21:37,506 1200773 [MyScheduler_Worker-3] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:132] - Path = H:\jsonfiles\serverhealth.json
+2015-11-20 15:21:37,506 1200773 [MyScheduler_Worker-3] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:102] - File to process: H:\jsonfiles\serverhealth.json
+2015-11-20 15:21:37,537 1200804 [pool-1-thread-2] DEBUG s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:50] - SystemHealthAnalyzer.run()
+2015-11-20 15:21:37,537 1200804 [pool-1-thread-2] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId G: disk percent free (6.910000) is below warning level (10.000000)
+2015-11-20 15:21:37,537 1200804 [pool-1-thread-2] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId H: disk percent free (1.570000) is below warning level (10.000000)
+2015-11-20 15:21:37,537 1200804 [pool-1-thread-2] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:77] - DiskId H: disk percent free (1.570000) is below critical level (10.000000)
+2015-11-20 15:22:37,503 1260770 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:70] - systemhealth.job.ScannerJob@1e6f3f8a Directory to scan: H:\jsonfiles
+2015-11-20 15:22:37,503 1260770 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:71] - systemhealth.job.ScannerJob@1e6f3f8a File extension filter: json
+2015-11-20 15:22:37,535 1260802 [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:95] - executing scanner job...
+2015-11-20 15:22:37,535 1260802 [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:132] - Path = H:\jsonfiles\serverhealth.json
+2015-11-20 15:22:37,551 1260818 [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:102] - File to process: H:\jsonfiles\serverhealth.json
+2015-11-20 15:22:37,551 1260818 [pool-1-thread-3] DEBUG s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:50] - SystemHealthAnalyzer.run()
+2015-11-20 15:22:37,551 1260818 [pool-1-thread-3] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId G: disk percent free (6.910000) is below warning level (10.000000)
+2015-11-20 15:22:37,551 1260818 [pool-1-thread-3] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId H: disk percent free (1.570000) is below warning level (10.000000)
+2015-11-20 15:22:37,551 1260818 [pool-1-thread-3] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:77] - DiskId H: disk percent free (1.570000) is below critical level (10.000000)
+2015-11-20 15:23:37,501 1320768 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:70] - systemhealth.job.ScannerJob@1dde28ce Directory to scan: H:\jsonfiles
+2015-11-20 15:23:37,502 1320769 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:71] - systemhealth.job.ScannerJob@1dde28ce File extension filter: json
+2015-11-20 15:23:37,534 1320801 [MyScheduler_Worker-2] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:95] - executing scanner job...
+2015-11-20 15:23:37,534 1320801 [MyScheduler_Worker-2] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:132] - Path = H:\jsonfiles\serverhealth.json
+2015-11-20 15:23:37,534 1320801 [MyScheduler_Worker-2] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:102] - File to process: H:\jsonfiles\serverhealth.json
+2015-11-20 15:23:37,549 1320816 [pool-1-thread-1] DEBUG s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:50] - SystemHealthAnalyzer.run()
+2015-11-20 15:23:37,549 1320816 [pool-1-thread-1] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId G: disk percent free (6.910000) is below warning level (10.000000)
+2015-11-20 15:23:37,549 1320816 [pool-1-thread-1] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId H: disk percent free (1.570000) is below warning level (10.000000)
+2015-11-20 15:23:37,549 1320816 [pool-1-thread-1] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:77] - DiskId H: disk percent free (1.570000) is below critical level (10.000000)
+2015-11-20 15:24:37,500 1380767 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:70] - systemhealth.job.ScannerJob@57e13794 Directory to scan: H:\jsonfiles
+2015-11-20 15:24:37,500 1380767 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:71] - systemhealth.job.ScannerJob@57e13794 File extension filter: json
+2015-11-20 15:24:37,532 1380799 [MyScheduler_Worker-3] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:95] - executing scanner job...
+2015-11-20 15:24:37,532 1380799 [MyScheduler_Worker-3] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:132] - Path = H:\jsonfiles\serverhealth.json
+2015-11-20 15:24:37,532 1380799 [MyScheduler_Worker-3] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:102] - File to process: H:\jsonfiles\serverhealth.json
+2015-11-20 15:24:37,532 1380799 [pool-1-thread-4] DEBUG s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:50] - SystemHealthAnalyzer.run()
+2015-11-20 15:24:37,547 1380814 [pool-1-thread-4] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId G: disk percent free (6.910000) is below warning level (10.000000)
+2015-11-20 15:24:37,547 1380814 [pool-1-thread-4] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId H: disk percent free (1.570000) is below warning level (10.000000)
+2015-11-20 15:24:37,547 1380814 [pool-1-thread-4] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:77] - DiskId H: disk percent free (1.570000) is below critical level (10.000000)
+2015-11-20 15:25:37,498 1440765 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:70] - systemhealth.job.ScannerJob@38a52381 Directory to scan: H:\jsonfiles
+2015-11-20 15:25:37,498 1440765 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:71] - systemhealth.job.ScannerJob@38a52381 File extension filter: json
+2015-11-20 15:25:37,514 1440781 [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:95] - executing scanner job...
+2015-11-20 15:25:37,514 1440781 [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:132] - Path = H:\jsonfiles\serverhealth.json
+2015-11-20 15:25:37,514 1440781 [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:102] - File to process: H:\jsonfiles\serverhealth.json
+2015-11-20 15:25:37,546 1440813 [pool-1-thread-5] DEBUG s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:50] - SystemHealthAnalyzer.run()
+2015-11-20 15:25:37,546 1440813 [pool-1-thread-5] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId G: disk percent free (6.910000) is below warning level (10.000000)
+2015-11-20 15:25:37,546 1440813 [pool-1-thread-5] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId H: disk percent free (1.570000) is below warning level (10.000000)
+2015-11-20 15:25:37,546 1440813 [pool-1-thread-5] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:77] - DiskId H: disk percent free (1.570000) is below critical level (10.000000)
+2015-11-20 15:26:37,514 1500781 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:70] - systemhealth.job.ScannerJob@64cade35 Directory to scan: H:\jsonfiles
+2015-11-20 15:26:37,514 1500781 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:71] - systemhealth.job.ScannerJob@64cade35 File extension filter: json
+2015-11-20 15:26:37,546 1500813 [MyScheduler_Worker-2] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:95] - executing scanner job...
+2015-11-20 15:26:37,546 1500813 [MyScheduler_Worker-2] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:132] - Path = H:\jsonfiles\serverhealth.json
+2015-11-20 15:26:37,546 1500813 [MyScheduler_Worker-2] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:102] - File to process: H:\jsonfiles\serverhealth.json
+2015-11-20 15:26:37,561 1500828 [pool-1-thread-2] DEBUG s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:50] - SystemHealthAnalyzer.run()
+2015-11-20 15:26:37,561 1500828 [pool-1-thread-2] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId G: disk percent free (6.910000) is below warning level (10.000000)
+2015-11-20 15:26:37,561 1500828 [pool-1-thread-2] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId H: disk percent free (1.570000) is below warning level (10.000000)
+2015-11-20 15:26:37,561 1500828 [pool-1-thread-2] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:77] - DiskId H: disk percent free (1.570000) is below critical level (10.000000)
+2015-11-20 15:27:37,512 1560779 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:70] - systemhealth.job.ScannerJob@621d7a6 Directory to scan: H:\jsonfiles
+2015-11-20 15:27:37,512 1560779 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:71] - systemhealth.job.ScannerJob@621d7a6 File extension filter: json
+2015-11-20 15:27:37,544 1560811 [MyScheduler_Worker-3] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:95] - executing scanner job...
+2015-11-20 15:27:37,544 1560811 [MyScheduler_Worker-3] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:132] - Path = H:\jsonfiles\serverhealth.json
+2015-11-20 15:27:37,544 1560811 [MyScheduler_Worker-3] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:102] - File to process: H:\jsonfiles\serverhealth.json
+2015-11-20 15:27:37,560 1560827 [pool-1-thread-3] DEBUG s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:50] - SystemHealthAnalyzer.run()
+2015-11-20 15:27:37,560 1560827 [pool-1-thread-3] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId G: disk percent free (6.910000) is below warning level (10.000000)
+2015-11-20 15:27:37,560 1560827 [pool-1-thread-3] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId H: disk percent free (1.570000) is below warning level (10.000000)
+2015-11-20 15:27:37,560 1560827 [pool-1-thread-3] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:77] - DiskId H: disk percent free (1.570000) is below critical level (10.000000)
+2015-11-20 15:28:37,510 1620777 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:70] - systemhealth.job.ScannerJob@258dfd7b Directory to scan: H:\jsonfiles
+2015-11-20 15:28:37,510 1620777 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:71] - systemhealth.job.ScannerJob@258dfd7b File extension filter: json
+2015-11-20 15:28:37,542 1620809 [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:95] - executing scanner job...
+2015-11-20 15:28:37,542 1620809 [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:132] - Path = H:\jsonfiles\serverhealth.json
+2015-11-20 15:28:37,558 1620825 [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:102] - File to process: H:\jsonfiles\serverhealth.json
+2015-11-20 15:28:37,558 1620825 [pool-1-thread-1] DEBUG s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:50] - SystemHealthAnalyzer.run()
+2015-11-20 15:28:37,558 1620825 [pool-1-thread-1] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId G: disk percent free (6.910000) is below warning level (10.000000)
+2015-11-20 15:28:37,573 1620840 [pool-1-thread-1] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId H: disk percent free (1.570000) is below warning level (10.000000)
+2015-11-20 15:28:37,573 1620840 [pool-1-thread-1] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:77] - DiskId H: disk percent free (1.570000) is below critical level (10.000000)
+2015-11-20 15:29:37,508 1680775 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:70] - systemhealth.job.ScannerJob@522b0dc7 Directory to scan: H:\jsonfiles
+2015-11-20 15:29:37,509 1680776 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:71] - systemhealth.job.ScannerJob@522b0dc7 File extension filter: json
+2015-11-20 15:29:37,556 1680823 [MyScheduler_Worker-2] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:95] - executing scanner job...
+2015-11-20 15:29:37,556 1680823 [MyScheduler_Worker-2] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:132] - Path = H:\jsonfiles\serverhealth.json
+2015-11-20 15:29:37,556 1680823 [MyScheduler_Worker-2] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:102] - File to process: H:\jsonfiles\serverhealth.json
+2015-11-20 15:29:37,572 1680839 [pool-1-thread-4] DEBUG s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:50] - SystemHealthAnalyzer.run()
+2015-11-20 15:29:37,572 1680839 [pool-1-thread-4] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId G: disk percent free (6.910000) is below warning level (10.000000)
+2015-11-20 15:29:37,572 1680839 [pool-1-thread-4] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId H: disk percent free (1.570000) is below warning level (10.000000)
+2015-11-20 15:29:37,572 1680839 [pool-1-thread-4] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:77] - DiskId H: disk percent free (1.570000) is below critical level (10.000000)
+2015-11-20 15:30:37,506 1740773 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:70] - systemhealth.job.ScannerJob@14aeff9e Directory to scan: H:\jsonfiles
+2015-11-20 15:30:37,506 1740773 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:71] - systemhealth.job.ScannerJob@14aeff9e File extension filter: json
+2015-11-20 15:30:37,507 1740774 [MyScheduler_Worker-3] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:95] - executing scanner job...
+2015-11-20 15:30:37,507 1740774 [MyScheduler_Worker-3] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:132] - Path = H:\jsonfiles\serverhealth.json
+2015-11-20 15:30:37,507 1740774 [MyScheduler_Worker-3] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:102] - File to process: H:\jsonfiles\serverhealth.json
+2015-11-20 15:30:37,539 1740806 [pool-1-thread-5] DEBUG s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:50] - SystemHealthAnalyzer.run()
+2015-11-20 15:30:37,539 1740806 [pool-1-thread-5] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId G: disk percent free (6.910000) is below warning level (10.000000)
+2015-11-20 15:30:37,539 1740806 [pool-1-thread-5] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId H: disk percent free (1.570000) is below warning level (10.000000)
+2015-11-20 15:30:37,539 1740806 [pool-1-thread-5] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:77] - DiskId H: disk percent free (1.570000) is below critical level (10.000000)
+2015-11-20 15:31:37,505 1800772 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:70] - systemhealth.job.ScannerJob@2576c196 Directory to scan: H:\jsonfiles
+2015-11-20 15:31:37,505 1800772 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:71] - systemhealth.job.ScannerJob@2576c196 File extension filter: json
+2015-11-20 15:31:37,537 1800804 [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:95] - executing scanner job...
+2015-11-20 15:31:37,537 1800804 [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:132] - Path = H:\jsonfiles\serverhealth.json
+2015-11-20 15:31:37,537 1800804 [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:102] - File to process: H:\jsonfiles\serverhealth.json
+2015-11-20 15:31:37,537 1800804 [pool-1-thread-2] DEBUG s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:50] - SystemHealthAnalyzer.run()
+2015-11-20 15:31:37,552 1800819 [pool-1-thread-2] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId G: disk percent free (6.910000) is below warning level (10.000000)
+2015-11-20 15:31:37,552 1800819 [pool-1-thread-2] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId H: disk percent free (1.570000) is below warning level (10.000000)
+2015-11-20 15:31:37,552 1800819 [pool-1-thread-2] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:77] - DiskId H: disk percent free (1.570000) is below critical level (10.000000)
+2015-11-20 15:32:37,503 1860770 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:70] - systemhealth.job.ScannerJob@2ad23950 Directory to scan: H:\jsonfiles
+2015-11-20 15:32:37,503 1860770 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:71] - systemhealth.job.ScannerJob@2ad23950 File extension filter: json
+2015-11-20 15:32:37,504 1860771 [MyScheduler_Worker-2] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:95] - executing scanner job...
+2015-11-20 15:32:37,520 1860787 [MyScheduler_Worker-2] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:132] - Path = H:\jsonfiles\serverhealth.json
+2015-11-20 15:32:37,535 1860802 [MyScheduler_Worker-2] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:102] - File to process: H:\jsonfiles\serverhealth.json
+2015-11-20 15:32:37,535 1860802 [pool-1-thread-3] DEBUG s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:50] - SystemHealthAnalyzer.run()
+2015-11-20 15:32:37,535 1860802 [pool-1-thread-3] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId G: disk percent free (6.910000) is below warning level (10.000000)
+2015-11-20 15:32:37,535 1860802 [pool-1-thread-3] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId H: disk percent free (1.570000) is below warning level (10.000000)
+2015-11-20 15:32:37,535 1860802 [pool-1-thread-3] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:77] - DiskId H: disk percent free (1.570000) is below critical level (10.000000)
+2015-11-20 15:33:37,501 1920768 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:70] - systemhealth.job.ScannerJob@5da22667 Directory to scan: H:\jsonfiles
+2015-11-20 15:33:37,501 1920768 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:71] - systemhealth.job.ScannerJob@5da22667 File extension filter: json
+2015-11-20 15:33:37,533 1920800 [MyScheduler_Worker-3] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:95] - executing scanner job...
+2015-11-20 15:33:37,549 1920816 [MyScheduler_Worker-3] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:132] - Path = H:\jsonfiles\serverhealth.json
+2015-11-20 15:33:37,549 1920816 [MyScheduler_Worker-3] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:102] - File to process: H:\jsonfiles\serverhealth.json
+2015-11-20 15:33:37,549 1920816 [pool-1-thread-1] DEBUG s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:50] - SystemHealthAnalyzer.run()
+2015-11-20 15:33:37,549 1920816 [pool-1-thread-1] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId G: disk percent free (6.910000) is below warning level (10.000000)
+2015-11-20 15:33:37,549 1920816 [pool-1-thread-1] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId H: disk percent free (1.570000) is below warning level (10.000000)
+2015-11-20 15:33:37,549 1920816 [pool-1-thread-1] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:77] - DiskId H: disk percent free (1.570000) is below critical level (10.000000)
+2015-11-20 15:34:37,499 1980766 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:70] - systemhealth.job.ScannerJob@47068bbe Directory to scan: H:\jsonfiles
+2015-11-20 15:34:37,499 1980766 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:71] - systemhealth.job.ScannerJob@47068bbe File extension filter: json
+2015-11-20 15:34:37,532 1980799 [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:95] - executing scanner job...
+2015-11-20 15:34:37,532 1980799 [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:132] - Path = H:\jsonfiles\serverhealth.json
+2015-11-20 15:34:37,532 1980799 [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:102] - File to process: H:\jsonfiles\serverhealth.json
+2015-11-20 15:34:37,532 1980799 [pool-1-thread-4] DEBUG s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:50] - SystemHealthAnalyzer.run()
+2015-11-20 15:34:37,547 1980814 [pool-1-thread-4] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId G: disk percent free (6.910000) is below warning level (10.000000)
+2015-11-20 15:34:37,547 1980814 [pool-1-thread-4] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId H: disk percent free (1.570000) is below warning level (10.000000)
+2015-11-20 15:34:37,547 1980814 [pool-1-thread-4] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:77] - DiskId H: disk percent free (1.570000) is below critical level (10.000000)
+2015-11-20 15:35:37,513 2040780 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:70] - systemhealth.job.ScannerJob@88f59e6 Directory to scan: H:\jsonfiles
+2015-11-20 15:35:37,513 2040780 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:71] - systemhealth.job.ScannerJob@88f59e6 File extension filter: json
+2015-11-20 15:35:37,545 2040812 [MyScheduler_Worker-2] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:95] - executing scanner job...
+2015-11-20 15:35:37,561 2040828 [MyScheduler_Worker-2] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:132] - Path = H:\jsonfiles\serverhealth.json
+2015-11-20 15:35:37,561 2040828 [MyScheduler_Worker-2] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:102] - File to process: H:\jsonfiles\serverhealth.json
+2015-11-20 15:35:37,561 2040828 [pool-1-thread-5] DEBUG s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:50] - SystemHealthAnalyzer.run()
+2015-11-20 15:35:37,561 2040828 [pool-1-thread-5] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId G: disk percent free (6.910000) is below warning level (10.000000)
+2015-11-20 15:35:37,561 2040828 [pool-1-thread-5] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId H: disk percent free (1.570000) is below warning level (10.000000)
+2015-11-20 15:35:37,561 2040828 [pool-1-thread-5] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:77] - DiskId H: disk percent free (1.570000) is below critical level (10.000000)
+2015-11-20 15:36:37,511 2100778 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:70] - systemhealth.job.ScannerJob@692ce3f5 Directory to scan: H:\jsonfiles
+2015-11-20 15:36:37,511 2100778 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:71] - systemhealth.job.ScannerJob@692ce3f5 File extension filter: json
+2015-11-20 15:36:37,544 2100811 [MyScheduler_Worker-3] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:95] - executing scanner job...
+2015-11-20 15:36:37,544 2100811 [MyScheduler_Worker-3] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:132] - Path = H:\jsonfiles\serverhealth.json
+2015-11-20 15:36:37,544 2100811 [MyScheduler_Worker-3] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:102] - File to process: H:\jsonfiles\serverhealth.json
+2015-11-20 15:36:37,559 2100826 [pool-1-thread-2] DEBUG s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:50] - SystemHealthAnalyzer.run()
+2015-11-20 15:36:37,559 2100826 [pool-1-thread-2] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId G: disk percent free (6.910000) is below warning level (10.000000)
+2015-11-20 15:36:37,559 2100826 [pool-1-thread-2] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId H: disk percent free (1.570000) is below warning level (10.000000)
+2015-11-20 15:36:37,559 2100826 [pool-1-thread-2] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:77] - DiskId H: disk percent free (1.570000) is below critical level (10.000000)
+2015-11-20 15:37:37,510 2160777 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:70] - systemhealth.job.ScannerJob@75bc9535 Directory to scan: H:\jsonfiles
+2015-11-20 15:37:37,510 2160777 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:71] - systemhealth.job.ScannerJob@75bc9535 File extension filter: json
+2015-11-20 15:37:37,542 2160809 [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:95] - executing scanner job...
+2015-11-20 15:37:37,557 2160824 [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:132] - Path = H:\jsonfiles\serverhealth.json
+2015-11-20 15:37:37,557 2160824 [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:102] - File to process: H:\jsonfiles\serverhealth.json
+2015-11-20 15:37:37,557 2160824 [pool-1-thread-3] DEBUG s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:50] - SystemHealthAnalyzer.run()
+2015-11-20 15:37:37,573 2160840 [pool-1-thread-3] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId G: disk percent free (6.910000) is below warning level (10.000000)
+2015-11-20 15:37:37,573 2160840 [pool-1-thread-3] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId H: disk percent free (1.570000) is below warning level (10.000000)
+2015-11-20 15:37:37,573 2160840 [pool-1-thread-3] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:77] - DiskId H: disk percent free (1.570000) is below critical level (10.000000)
+2015-11-20 15:38:37,506 2220773 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:70] - systemhealth.job.ScannerJob@1e642f51 Directory to scan: H:\jsonfiles
+2015-11-20 15:38:37,506 2220773 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:71] - systemhealth.job.ScannerJob@1e642f51 File extension filter: json
+2015-11-20 15:38:37,538 2220805 [MyScheduler_Worker-2] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:95] - executing scanner job...
+2015-11-20 15:38:37,554 2220821 [MyScheduler_Worker-2] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:132] - Path = H:\jsonfiles\serverhealth.json
+2015-11-20 15:38:37,554 2220821 [MyScheduler_Worker-2] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:102] - File to process: H:\jsonfiles\serverhealth.json
+2015-11-20 15:38:37,569 2220836 [pool-1-thread-1] DEBUG s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:50] - SystemHealthAnalyzer.run()
+2015-11-20 15:38:37,569 2220836 [pool-1-thread-1] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId G: disk percent free (6.910000) is below warning level (10.000000)
+2015-11-20 15:38:37,569 2220836 [pool-1-thread-1] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId H: disk percent free (1.570000) is below warning level (10.000000)
+2015-11-20 15:38:37,569 2220836 [pool-1-thread-1] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:77] - DiskId H: disk percent free (1.570000) is below critical level (10.000000)
+2015-11-20 15:39:37,521 2280788 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:70] - systemhealth.job.ScannerJob@1acc1db0 Directory to scan: H:\jsonfiles
+2015-11-20 15:39:37,521 2280788 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:71] - systemhealth.job.ScannerJob@1acc1db0 File extension filter: json
+2015-11-20 15:39:37,553 2280820 [MyScheduler_Worker-3] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:95] - executing scanner job...
+2015-11-20 15:39:37,553 2280820 [MyScheduler_Worker-3] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:132] - Path = H:\jsonfiles\serverhealth.json
+2015-11-20 15:39:37,553 2280820 [MyScheduler_Worker-3] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:102] - File to process: H:\jsonfiles\serverhealth.json
+2015-11-20 15:39:37,553 2280820 [pool-1-thread-4] DEBUG s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:50] - SystemHealthAnalyzer.run()
+2015-11-20 15:39:37,568 2280835 [pool-1-thread-4] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId G: disk percent free (6.910000) is below warning level (10.000000)
+2015-11-20 15:39:37,568 2280835 [pool-1-thread-4] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId H: disk percent free (1.570000) is below warning level (10.000000)
+2015-11-20 15:39:37,568 2280835 [pool-1-thread-4] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:77] - DiskId H: disk percent free (1.570000) is below critical level (10.000000)
+2015-11-20 15:40:37,504 2340771 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:70] - systemhealth.job.ScannerJob@2b6658a6 Directory to scan: H:\jsonfiles
+2015-11-20 15:40:37,504 2340771 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:71] - systemhealth.job.ScannerJob@2b6658a6 File extension filter: json
+2015-11-20 15:40:37,552 2340819 [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:95] - executing scanner job...
+2015-11-20 15:40:37,552 2340819 [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:132] - Path = H:\jsonfiles\serverhealth.json
+2015-11-20 15:40:37,552 2340819 [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:102] - File to process: H:\jsonfiles\serverhealth.json
+2015-11-20 15:40:37,552 2340819 [pool-1-thread-5] DEBUG s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:50] - SystemHealthAnalyzer.run()
+2015-11-20 15:40:37,568 2340835 [pool-1-thread-5] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId G: disk percent free (6.910000) is below warning level (10.000000)
+2015-11-20 15:40:37,568 2340835 [pool-1-thread-5] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId H: disk percent free (1.570000) is below warning level (10.000000)
+2015-11-20 15:40:37,568 2340835 [pool-1-thread-5] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:77] - DiskId H: disk percent free (1.570000) is below critical level (10.000000)
+2015-11-20 15:41:37,502 2400769 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:70] - systemhealth.job.ScannerJob@1e626c5c Directory to scan: H:\jsonfiles
+2015-11-20 15:41:37,502 2400769 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:71] - systemhealth.job.ScannerJob@1e626c5c File extension filter: json
+2015-11-20 15:41:37,535 2400802 [MyScheduler_Worker-2] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:95] - executing scanner job...
+2015-11-20 15:41:37,550 2400817 [MyScheduler_Worker-2] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:132] - Path = H:\jsonfiles\serverhealth.json
+2015-11-20 15:41:37,550 2400817 [MyScheduler_Worker-2] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:102] - File to process: H:\jsonfiles\serverhealth.json
+2015-11-20 15:41:37,550 2400817 [pool-1-thread-2] DEBUG s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:50] - SystemHealthAnalyzer.run()
+2015-11-20 15:41:37,566 2400833 [pool-1-thread-2] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId G: disk percent free (6.910000) is below warning level (10.000000)
+2015-11-20 15:41:37,566 2400833 [pool-1-thread-2] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId H: disk percent free (1.570000) is below warning level (10.000000)
+2015-11-20 15:41:37,566 2400833 [pool-1-thread-2] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:77] - DiskId H: disk percent free (1.570000) is below critical level (10.000000)
+2015-11-20 15:42:37,501 2460768 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:70] - systemhealth.job.ScannerJob@49d1cefe Directory to scan: H:\jsonfiles
+2015-11-20 15:42:37,501 2460768 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:71] - systemhealth.job.ScannerJob@49d1cefe File extension filter: json
+2015-11-20 15:42:37,533 2460800 [MyScheduler_Worker-3] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:95] - executing scanner job...
+2015-11-20 15:42:37,533 2460800 [MyScheduler_Worker-3] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:132] - Path = H:\jsonfiles\serverhealth.json
+2015-11-20 15:42:37,533 2460800 [MyScheduler_Worker-3] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:102] - File to process: H:\jsonfiles\serverhealth.json
+2015-11-20 15:42:37,548 2460815 [pool-1-thread-3] DEBUG s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:50] - SystemHealthAnalyzer.run()
+2015-11-20 15:42:37,548 2460815 [pool-1-thread-3] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId G: disk percent free (6.910000) is below warning level (10.000000)
+2015-11-20 15:42:37,548 2460815 [pool-1-thread-3] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId H: disk percent free (1.570000) is below warning level (10.000000)
+2015-11-20 15:42:37,548 2460815 [pool-1-thread-3] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:77] - DiskId H: disk percent free (1.570000) is below critical level (10.000000)
+2015-11-20 15:43:37,499 2520766 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:70] - systemhealth.job.ScannerJob@7501c2d7 Directory to scan: H:\jsonfiles
+2015-11-20 15:43:37,499 2520766 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:71] - systemhealth.job.ScannerJob@7501c2d7 File extension filter: json
+2015-11-20 15:43:37,531 2520798 [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:95] - executing scanner job...
+2015-11-20 15:43:37,531 2520798 [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:132] - Path = H:\jsonfiles\serverhealth.json
+2015-11-20 15:43:37,531 2520798 [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:102] - File to process: H:\jsonfiles\serverhealth.json
+2015-11-20 15:43:37,531 2520798 [pool-1-thread-1] DEBUG s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:50] - SystemHealthAnalyzer.run()
+2015-11-20 15:43:37,531 2520798 [pool-1-thread-1] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId G: disk percent free (6.910000) is below warning level (10.000000)
+2015-11-20 15:43:37,547 2520814 [pool-1-thread-1] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId H: disk percent free (1.570000) is below warning level (10.000000)
+2015-11-20 15:43:37,547 2520814 [pool-1-thread-1] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:77] - DiskId H: disk percent free (1.570000) is below critical level (10.000000)
+2015-11-20 15:44:37,513 2580780 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:70] - systemhealth.job.ScannerJob@2762d48d Directory to scan: H:\jsonfiles
+2015-11-20 15:44:37,513 2580780 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:71] - systemhealth.job.ScannerJob@2762d48d File extension filter: json
+2015-11-20 15:44:37,545 2580812 [MyScheduler_Worker-2] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:95] - executing scanner job...
+2015-11-20 15:44:37,545 2580812 [MyScheduler_Worker-2] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:132] - Path = H:\jsonfiles\serverhealth.json
+2015-11-20 15:44:37,545 2580812 [MyScheduler_Worker-2] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:102] - File to process: H:\jsonfiles\serverhealth.json
+2015-11-20 15:44:37,560 2580827 [pool-1-thread-4] DEBUG s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:50] - SystemHealthAnalyzer.run()
+2015-11-20 15:44:37,560 2580827 [pool-1-thread-4] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId G: disk percent free (6.910000) is below warning level (10.000000)
+2015-11-20 15:44:37,560 2580827 [pool-1-thread-4] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId H: disk percent free (1.570000) is below warning level (10.000000)
+2015-11-20 15:44:37,560 2580827 [pool-1-thread-4] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:77] - DiskId H: disk percent free (1.570000) is below critical level (10.000000)
+2015-11-20 15:45:37,511 2640778 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:70] - systemhealth.job.ScannerJob@703a355c Directory to scan: H:\jsonfiles
+2015-11-20 15:45:37,526 2640793 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:71] - systemhealth.job.ScannerJob@703a355c File extension filter: json
+2015-11-20 15:45:37,543 2640810 [MyScheduler_Worker-3] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:95] - executing scanner job...
+2015-11-20 15:45:37,559 2640826 [MyScheduler_Worker-3] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:132] - Path = H:\jsonfiles\serverhealth.json
+2015-11-20 15:45:37,559 2640826 [MyScheduler_Worker-3] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:102] - File to process: H:\jsonfiles\serverhealth.json
+2015-11-20 15:45:37,559 2640826 [pool-1-thread-5] DEBUG s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:50] - SystemHealthAnalyzer.run()
+2015-11-20 15:45:37,559 2640826 [pool-1-thread-5] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId G: disk percent free (6.910000) is below warning level (10.000000)
+2015-11-20 15:45:37,559 2640826 [pool-1-thread-5] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId H: disk percent free (1.570000) is below warning level (10.000000)
+2015-11-20 15:45:37,559 2640826 [pool-1-thread-5] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:77] - DiskId H: disk percent free (1.570000) is below critical level (10.000000)
+2015-11-20 15:46:37,512 2700779 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:70] - systemhealth.job.ScannerJob@173f6179 Directory to scan: H:\jsonfiles
+2015-11-20 15:46:37,512 2700779 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:71] - systemhealth.job.ScannerJob@173f6179 File extension filter: json
+2015-11-20 15:46:37,544 2700811 [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:95] - executing scanner job...
+2015-11-20 15:46:37,544 2700811 [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:132] - Path = H:\jsonfiles\serverhealth.json
+2015-11-20 15:46:37,544 2700811 [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:102] - File to process: H:\jsonfiles\serverhealth.json
+2015-11-20 15:46:37,560 2700827 [pool-1-thread-2] DEBUG s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:50] - SystemHealthAnalyzer.run()
+2015-11-20 15:46:37,560 2700827 [pool-1-thread-2] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId G: disk percent free (6.910000) is below warning level (10.000000)
+2015-11-20 15:46:37,560 2700827 [pool-1-thread-2] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId H: disk percent free (1.570000) is below warning level (10.000000)
+2015-11-20 15:46:37,560 2700827 [pool-1-thread-2] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:77] - DiskId H: disk percent free (1.570000) is below critical level (10.000000)
+2015-11-20 15:47:37,510 2760777 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:70] - systemhealth.job.ScannerJob@6cd288b5 Directory to scan: H:\jsonfiles
+2015-11-20 15:47:37,510 2760777 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:71] - systemhealth.job.ScannerJob@6cd288b5 File extension filter: json
+2015-11-20 15:47:37,511 2760778 [MyScheduler_Worker-2] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:95] - executing scanner job...
+2015-11-20 15:47:37,511 2760778 [MyScheduler_Worker-2] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:132] - Path = H:\jsonfiles\serverhealth.json
+2015-11-20 15:47:37,511 2760778 [MyScheduler_Worker-2] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:102] - File to process: H:\jsonfiles\serverhealth.json
+2015-11-20 15:47:37,511 2760778 [pool-1-thread-3] DEBUG s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:50] - SystemHealthAnalyzer.run()
+2015-11-20 15:47:37,511 2760778 [pool-1-thread-3] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId G: disk percent free (6.910000) is below warning level (10.000000)
+2015-11-20 15:47:37,511 2760778 [pool-1-thread-3] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId H: disk percent free (1.570000) is below warning level (10.000000)
+2015-11-20 15:47:37,511 2760778 [pool-1-thread-3] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:77] - DiskId H: disk percent free (1.570000) is below critical level (10.000000)
+2015-11-20 15:48:37,513 2820780 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:70] - systemhealth.job.ScannerJob@56b85b8e Directory to scan: H:\jsonfiles
+2015-11-20 15:48:37,513 2820780 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:71] - systemhealth.job.ScannerJob@56b85b8e File extension filter: json
+2015-11-20 15:48:37,545 2820812 [MyScheduler_Worker-3] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:95] - executing scanner job...
+2015-11-20 15:48:37,545 2820812 [MyScheduler_Worker-3] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:132] - Path = H:\jsonfiles\serverhealth.json
+2015-11-20 15:48:37,545 2820812 [MyScheduler_Worker-3] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:102] - File to process: H:\jsonfiles\serverhealth.json
+2015-11-20 15:48:37,545 2820812 [pool-1-thread-1] DEBUG s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:50] - SystemHealthAnalyzer.run()
+2015-11-20 15:48:37,545 2820812 [pool-1-thread-1] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId G: disk percent free (6.910000) is below warning level (10.000000)
+2015-11-20 15:48:37,545 2820812 [pool-1-thread-1] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId H: disk percent free (1.570000) is below warning level (10.000000)
+2015-11-20 15:48:37,545 2820812 [pool-1-thread-1] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:77] - DiskId H: disk percent free (1.570000) is below critical level (10.000000)
+2015-11-20 15:49:37,527 2880794 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:70] - systemhealth.job.ScannerJob@75f82e19 Directory to scan: H:\jsonfiles
+2015-11-20 15:49:37,527 2880794 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:71] - systemhealth.job.ScannerJob@75f82e19 File extension filter: json
+2015-11-20 15:49:37,559 2880826 [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:95] - executing scanner job...
+2015-11-20 15:49:37,559 2880826 [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:132] - Path = H:\jsonfiles\serverhealth.json
+2015-11-20 15:49:37,559 2880826 [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:102] - File to process: H:\jsonfiles\serverhealth.json
+2015-11-20 15:49:37,575 2880842 [pool-1-thread-4] DEBUG s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:50] - SystemHealthAnalyzer.run()
+2015-11-20 15:49:37,575 2880842 [pool-1-thread-4] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId G: disk percent free (6.910000) is below warning level (10.000000)
+2015-11-20 15:49:37,575 2880842 [pool-1-thread-4] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId H: disk percent free (1.570000) is below warning level (10.000000)
+2015-11-20 15:49:37,575 2880842 [pool-1-thread-4] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:77] - DiskId H: disk percent free (1.570000) is below critical level (10.000000)
+2015-11-20 15:50:37,510 2940777 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:70] - systemhealth.job.ScannerJob@1beaf45e Directory to scan: H:\jsonfiles
+2015-11-20 15:50:37,510 2940777 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:71] - systemhealth.job.ScannerJob@1beaf45e File extension filter: json
+2015-11-20 15:50:37,511 2940778 [MyScheduler_Worker-2] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:95] - executing scanner job...
+2015-11-20 15:50:37,511 2940778 [MyScheduler_Worker-2] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:132] - Path = H:\jsonfiles\serverhealth.json
+2015-11-20 15:50:37,511 2940778 [MyScheduler_Worker-2] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:102] - File to process: H:\jsonfiles\serverhealth.json
+2015-11-20 15:50:37,542 2940809 [pool-1-thread-5] DEBUG s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:50] - SystemHealthAnalyzer.run()
+2015-11-20 15:50:37,542 2940809 [pool-1-thread-5] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId G: disk percent free (6.910000) is below warning level (10.000000)
+2015-11-20 15:50:37,542 2940809 [pool-1-thread-5] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId H: disk percent free (1.570000) is below warning level (10.000000)
+2015-11-20 15:50:37,542 2940809 [pool-1-thread-5] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:77] - DiskId H: disk percent free (1.570000) is below critical level (10.000000)
+2015-11-20 15:51:37,508 3000775 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:70] - systemhealth.job.ScannerJob@5eb9bf93 Directory to scan: H:\jsonfiles
+2015-11-20 15:51:37,508 3000775 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:71] - systemhealth.job.ScannerJob@5eb9bf93 File extension filter: json
+2015-11-20 15:51:37,540 3000807 [MyScheduler_Worker-3] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:95] - executing scanner job...
+2015-11-20 15:51:37,540 3000807 [MyScheduler_Worker-3] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:132] - Path = H:\jsonfiles\serverhealth.json
+2015-11-20 15:51:37,540 3000807 [MyScheduler_Worker-3] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:102] - File to process: H:\jsonfiles\serverhealth.json
+2015-11-20 15:51:37,556 3000823 [pool-1-thread-2] DEBUG s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:50] - SystemHealthAnalyzer.run()
+2015-11-20 15:51:37,556 3000823 [pool-1-thread-2] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId G: disk percent free (6.910000) is below warning level (10.000000)
+2015-11-20 15:51:37,556 3000823 [pool-1-thread-2] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId H: disk percent free (1.570000) is below warning level (10.000000)
+2015-11-20 15:51:37,556 3000823 [pool-1-thread-2] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:77] - DiskId H: disk percent free (1.570000) is below critical level (10.000000)
+2015-11-20 15:52:37,506 3060773 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:70] - systemhealth.job.ScannerJob@7fd5ac27 Directory to scan: H:\jsonfiles
+2015-11-20 15:52:37,506 3060773 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:71] - systemhealth.job.ScannerJob@7fd5ac27 File extension filter: json
+2015-11-20 15:52:37,538 3060805 [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:95] - executing scanner job...
+2015-11-20 15:52:37,554 3060821 [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:132] - Path = H:\jsonfiles\serverhealth.json
+2015-11-20 15:52:37,554 3060821 [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:102] - File to process: H:\jsonfiles\serverhealth.json
+2015-11-20 15:52:37,554 3060821 [pool-1-thread-3] DEBUG s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:50] - SystemHealthAnalyzer.run()
+2015-11-20 15:52:37,554 3060821 [pool-1-thread-3] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId G: disk percent free (6.910000) is below warning level (10.000000)
+2015-11-20 15:52:37,554 3060821 [pool-1-thread-3] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId H: disk percent free (1.570000) is below warning level (10.000000)
+2015-11-20 15:52:37,554 3060821 [pool-1-thread-3] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:77] - DiskId H: disk percent free (1.570000) is below critical level (10.000000)
+2015-11-20 15:53:37,507 3120774 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:70] - systemhealth.job.ScannerJob@28cfec07 Directory to scan: H:\jsonfiles
+2015-11-20 15:53:37,507 3120774 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:71] - systemhealth.job.ScannerJob@28cfec07 File extension filter: json
+2015-11-20 15:53:37,539 3120806 [MyScheduler_Worker-2] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:95] - executing scanner job...
+2015-11-20 15:53:37,539 3120806 [MyScheduler_Worker-2] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:132] - Path = H:\jsonfiles\serverhealth.json
+2015-11-20 15:53:37,539 3120806 [MyScheduler_Worker-2] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:102] - File to process: H:\jsonfiles\serverhealth.json
+2015-11-20 15:53:37,555 3120822 [pool-1-thread-1] DEBUG s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:50] - SystemHealthAnalyzer.run()
+2015-11-20 15:53:37,555 3120822 [pool-1-thread-1] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId G: disk percent free (6.910000) is below warning level (10.000000)
+2015-11-20 15:53:37,555 3120822 [pool-1-thread-1] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId H: disk percent free (1.570000) is below warning level (10.000000)
+2015-11-20 15:53:37,555 3120822 [pool-1-thread-1] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:77] - DiskId H: disk percent free (1.570000) is below critical level (10.000000)
+2015-11-20 15:54:37,505 3180772 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:70] - systemhealth.job.ScannerJob@69c7e326 Directory to scan: H:\jsonfiles
+2015-11-20 15:54:37,505 3180772 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:71] - systemhealth.job.ScannerJob@69c7e326 File extension filter: json
+2015-11-20 15:54:37,537 3180804 [MyScheduler_Worker-3] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:95] - executing scanner job...
+2015-11-20 15:54:37,537 3180804 [MyScheduler_Worker-3] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:132] - Path = H:\jsonfiles\serverhealth.json
+2015-11-20 15:54:37,553 3180820 [MyScheduler_Worker-3] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:102] - File to process: H:\jsonfiles\serverhealth.json
+2015-11-20 15:54:37,553 3180820 [pool-1-thread-4] DEBUG s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:50] - SystemHealthAnalyzer.run()
+2015-11-20 15:54:37,553 3180820 [pool-1-thread-4] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId G: disk percent free (6.910000) is below warning level (10.000000)
+2015-11-20 15:54:37,553 3180820 [pool-1-thread-4] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId H: disk percent free (1.570000) is below warning level (10.000000)
+2015-11-20 15:54:37,553 3180820 [pool-1-thread-4] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:77] - DiskId H: disk percent free (1.570000) is below critical level (10.000000)
+2015-11-20 15:55:37,503 3240770 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:70] - systemhealth.job.ScannerJob@1f65cb84 Directory to scan: H:\jsonfiles
+2015-11-20 15:55:37,503 3240770 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:71] - systemhealth.job.ScannerJob@1f65cb84 File extension filter: json
+2015-11-20 15:55:37,504 3240771 [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:95] - executing scanner job...
+2015-11-20 15:55:37,504 3240771 [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:132] - Path = H:\jsonfiles\serverhealth.json
+2015-11-20 15:55:37,504 3240771 [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:102] - File to process: H:\jsonfiles\serverhealth.json
+2015-11-20 15:55:37,535 3240802 [pool-1-thread-5] DEBUG s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:50] - SystemHealthAnalyzer.run()
+2015-11-20 15:55:37,535 3240802 [pool-1-thread-5] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId G: disk percent free (6.910000) is below warning level (10.000000)
+2015-11-20 15:55:37,535 3240802 [pool-1-thread-5] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:67] - DiskId H: disk percent free (1.570000) is below warning level (10.000000)
+2015-11-20 15:55:37,535 3240802 [pool-1-thread-5] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:77] - DiskId H: disk percent free (1.570000) is below critical level (10.000000)
+2015-11-20 15:56:37,501 3300768 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:70] - systemhealth.job.ScannerJob@434cc0ad Directory to scan: H:\jsonfiles
+2015-11-20 15:56:37,501 3300768 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:71] - systemhealth.job.ScannerJob@434cc0ad File extension filter: json
+2015-11-20 15:56:37,549 3300816 [MyScheduler_Worker-2] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:95] - executing scanner job...
+2015-11-20 15:56:37,549 3300816 [MyScheduler_Worker-2] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:132] - Path = H:\jsonfiles\serverhealth.json
+2015-11-20 15:56:37,549 3300816 [MyScheduler_Worker-2] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:102] - File to process: H:\jsonfiles\serverhealth.json
+2015-11-20 15:56:37,549 3300816 [pool-1-thread-2] DEBUG s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:50] - SystemHealthAnalyzer.run()
+2015-11-20 15:56:37,549 3300816 [pool-1-thread-2] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:82] - DiskId G: disk percent free (6.910000) is below warning level (10.000000)
+2015-11-20 15:56:37,565 3300832 [pool-1-thread-2] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:69] - DiskId H: disk percent free (1.570000) is below critical level (10.000000)
+2015-11-20 15:56:37,565 3300832 [pool-1-thread-2] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:82] - DiskId H: disk percent free (1.570000) is below warning level (10.000000)
+2015-11-20 15:57:37,525 3360792 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:70] - systemhealth.job.ScannerJob@49498075 Directory to scan: H:\jsonfiles
+2015-11-20 15:57:37,525 3360792 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:71] - systemhealth.job.ScannerJob@49498075 File extension filter: json
+2015-11-20 15:57:37,526 3360793 [MyScheduler_Worker-3] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:95] - executing scanner job...
+2015-11-20 15:57:37,557 3360824 [MyScheduler_Worker-3] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:132] - Path = H:\jsonfiles\serverhealth.json
+2015-11-20 15:57:37,557 3360824 [MyScheduler_Worker-3] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:102] - File to process: H:\jsonfiles\serverhealth.json
+2015-11-20 15:57:37,557 3360824 [pool-1-thread-3] DEBUG s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:50] - SystemHealthAnalyzer.run()
+2015-11-20 15:57:37,557 3360824 [pool-1-thread-3] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:82] - DiskId G: disk percent free (6.910000) is below warning level (10.000000)
+2015-11-20 15:57:37,557 3360824 [pool-1-thread-3] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:69] - DiskId H: disk percent free (1.570000) is below critical level (10.000000)
+2015-11-20 15:57:37,557 3360824 [pool-1-thread-3] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:82] - DiskId H: disk percent free (1.570000) is below warning level (10.000000)
+2015-11-20 15:58:37,510 3420777 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:70] - systemhealth.job.ScannerJob@7f762081 Directory to scan: H:\jsonfiles
+2015-11-20 15:58:37,510 3420777 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:71] - systemhealth.job.ScannerJob@7f762081 File extension filter: json
+2015-11-20 15:58:37,542 3420809 [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:95] - executing scanner job...
+2015-11-20 15:58:37,542 3420809 [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:132] - Path = H:\jsonfiles\serverhealth.json
+2015-11-20 15:58:37,542 3420809 [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:102] - File to process: H:\jsonfiles\serverhealth.json
+2015-11-20 15:58:37,542 3420809 [pool-1-thread-1] DEBUG s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:50] - SystemHealthAnalyzer.run()
+2015-11-20 15:58:37,558 3420825 [pool-1-thread-1] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:82] - DiskId G: disk percent free (6.910000) is below warning level (10.000000)
+2015-11-20 15:58:37,558 3420825 [pool-1-thread-1] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:69] - DiskId H: disk percent free (1.570000) is below critical level (10.000000)
+2015-11-20 15:58:37,558 3420825 [pool-1-thread-1] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:82] - DiskId H: disk percent free (1.570000) is below warning level (10.000000)
+2015-11-20 15:59:37,508 3480775 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:70] - systemhealth.job.ScannerJob@58ab17a Directory to scan: H:\jsonfiles
+2015-11-20 15:59:37,508 3480775 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:71] - systemhealth.job.ScannerJob@58ab17a File extension filter: json
+2015-11-20 15:59:37,540 3480807 [MyScheduler_Worker-2] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:95] - executing scanner job...
+2015-11-20 15:59:37,540 3480807 [MyScheduler_Worker-2] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:132] - Path = H:\jsonfiles\serverhealth.json
+2015-11-20 15:59:37,540 3480807 [MyScheduler_Worker-2] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:102] - File to process: H:\jsonfiles\serverhealth.json
+2015-11-20 15:59:37,556 3480823 [pool-1-thread-4] DEBUG s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:50] - SystemHealthAnalyzer.run()
+2015-11-20 15:59:37,556 3480823 [pool-1-thread-4] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:82] - DiskId G: disk percent free (6.910000) is below warning level (10.000000)
+2015-11-20 15:59:37,556 3480823 [pool-1-thread-4] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:69] - DiskId H: disk percent free (1.570000) is below critical level (10.000000)
+2015-11-20 15:59:37,556 3480823 [pool-1-thread-4] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:82] - DiskId H: disk percent free (1.570000) is below warning level (10.000000)
+2015-11-20 16:00:37,506 3540773 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:70] - systemhealth.job.ScannerJob@20de561d Directory to scan: H:\jsonfiles
+2015-11-20 16:00:37,506 3540773 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:71] - systemhealth.job.ScannerJob@20de561d File extension filter: json
+2015-11-20 16:00:37,507 3540774 [MyScheduler_Worker-3] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:95] - executing scanner job...
+2015-11-20 16:00:37,507 3540774 [MyScheduler_Worker-3] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:132] - Path = H:\jsonfiles\serverhealth.json
+2015-11-20 16:00:37,507 3540774 [MyScheduler_Worker-3] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:102] - File to process: H:\jsonfiles\serverhealth.json
+2015-11-20 16:00:37,507 3540774 [pool-1-thread-5] DEBUG s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:50] - SystemHealthAnalyzer.run()
+2015-11-20 16:00:37,507 3540774 [pool-1-thread-5] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:82] - DiskId G: disk percent free (6.910000) is below warning level (10.000000)
+2015-11-20 16:00:37,539 3540806 [pool-1-thread-5] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:69] - DiskId H: disk percent free (1.570000) is below critical level (10.000000)
+2015-11-20 16:00:37,539 3540806 [pool-1-thread-5] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:82] - DiskId H: disk percent free (1.570000) is below warning level (10.000000)
+2015-11-20 16:01:37,505 3600772 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:70] - systemhealth.job.ScannerJob@67e35bce Directory to scan: H:\jsonfiles
+2015-11-20 16:01:37,505 3600772 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:71] - systemhealth.job.ScannerJob@67e35bce File extension filter: json
+2015-11-20 16:01:37,537 3600804 [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:95] - executing scanner job...
+2015-11-20 16:01:37,537 3600804 [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:132] - Path = H:\jsonfiles\serverhealth.json
+2015-11-20 16:01:37,537 3600804 [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:102] - File to process: H:\jsonfiles\serverhealth.json
+2015-11-20 16:01:37,552 3600819 [pool-1-thread-2] DEBUG s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:50] - SystemHealthAnalyzer.run()
+2015-11-20 16:01:37,552 3600819 [pool-1-thread-2] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:82] - DiskId G: disk percent free (6.910000) is below warning level (10.000000)
+2015-11-20 16:01:37,552 3600819 [pool-1-thread-2] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:69] - DiskId H: disk percent free (1.570000) is below critical level (10.000000)
+2015-11-20 16:01:37,552 3600819 [pool-1-thread-2] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:82] - DiskId H: disk percent free (1.570000) is below warning level (10.000000)
+2015-11-20 16:02:37,503 3660770 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:70] - systemhealth.job.ScannerJob@3057adb2 Directory to scan: H:\jsonfiles
+2015-11-20 16:02:37,503 3660770 [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:71] - systemhealth.job.ScannerJob@3057adb2 File extension filter: json
+2015-11-20 16:02:37,535 3660802 [MyScheduler_Worker-2] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:95] - executing scanner job...
+2015-11-20 16:02:37,535 3660802 [MyScheduler_Worker-2] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:132] - Path = H:\jsonfiles\serverhealth.json
+2015-11-20 16:02:37,535 3660802 [MyScheduler_Worker-2] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:102] - File to process: H:\jsonfiles\serverhealth.json
+2015-11-20 16:02:37,551 3660818 [pool-1-thread-3] DEBUG s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:50] - SystemHealthAnalyzer.run()
+2015-11-20 16:02:37,551 3660818 [pool-1-thread-3] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:82] - DiskId G: disk percent free (6.910000) is below warning level (10.000000)
+2015-11-20 16:02:37,551 3660818 [pool-1-thread-3] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:69] - DiskId H: disk percent free (1.570000) is below critical level (10.000000)
+2015-11-20 16:02:37,551 3660818 [pool-1-thread-3] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:82] - DiskId H: disk percent free (1.570000) is below warning level (10.000000)
+2015-11-20 16:03:37,411 795  [main] INFO  org.quartz.impl.StdSchedulerFactory [StdSchedulerFactory.java:1172] - Using default implementation for ThreadExecutor
+2015-11-20 16:03:37,490 874  [main] INFO  o.quartz.core.SchedulerSignalerImpl [SchedulerSignalerImpl.java:61] - Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2015-11-20 16:03:37,490 874  [main] INFO  org.quartz.core.QuartzScheduler [QuartzScheduler.java:240] - Quartz Scheduler v.2.2.2 created.
+2015-11-20 16:03:37,490 874  [main] INFO  org.quartz.simpl.RAMJobStore [RAMJobStore.java:155] - RAMJobStore initialized.
+2015-11-20 16:03:37,490 874  [main] INFO  org.quartz.core.QuartzScheduler [QuartzScheduler.java:305] - Scheduler meta-data: Quartz Scheduler (v2.2.2) 'MyScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 3 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
 
-2015-11-19 14:13:10,385 660  [main] INFO  systemhealth.data.JAXBTest [JAXBTest.java:76] - Threshold object: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<thresholdConfigData>
-    <threshold>
-        <serverName>XYZ</serverName>
-        <warningDiskFreePercent>0.1</warningDiskFreePercent>
-        <criticalDiskFreePercent>0.05</criticalDiskFreePercent>
-        <warningCPUUsagePercent>0.8</warningCPUUsagePercent>
-        <criticalCPUUsagePercent>0.95</criticalCPUUsagePercent>
-    </threshold>
-    <threshold>
-        <serverName>ABC</serverName>
-        <warningDiskFreePercent>0.1</warningDiskFreePercent>
-        <criticalDiskFreePercent>0.05</criticalDiskFreePercent>
-        <warningCPUUsagePercent>0.8</warningCPUUsagePercent>
-        <criticalCPUUsagePercent>0.95</criticalCPUUsagePercent>
-    </threshold>
-</thresholdConfigData>
-
-2015-11-19 14:16:48,202 630  [main] INFO  systemhealth.data.JAXBTest [JAXBTest.java:76] - Threshold object: <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<serverThresholdConfigData>
-    <serverThreshold>
-        <serverName>XYZ</serverName>
-        <warningDiskFreePercent>0.1</warningDiskFreePercent>
-        <criticalDiskFreePercent>0.05</criticalDiskFreePercent>
-        <warningCPUUsagePercent>0.8</warningCPUUsagePercent>
-        <criticalCPUUsagePercent>0.95</criticalCPUUsagePercent>
-    </serverThreshold>
-    <serverThreshold>
-        <serverName>ABC</serverName>
-        <warningDiskFreePercent>0.1</warningDiskFreePercent>
-        <criticalDiskFreePercent>0.05</criticalDiskFreePercent>
-        <warningCPUUsagePercent>0.8</warningCPUUsagePercent>
-        <criticalCPUUsagePercent>0.95</criticalCPUUsagePercent>
-    </serverThreshold>
-</serverThresholdConfigData>
-
+2015-11-20 16:03:37,490 874  [main] INFO  org.quartz.impl.StdSchedulerFactory [StdSchedulerFactory.java:1327] - Quartz scheduler 'MyScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2015-11-20 16:03:37,490 874  [main] INFO  org.quartz.impl.StdSchedulerFactory [StdSchedulerFactory.java:1331] - Quartz scheduler version: 2.2.2
+2015-11-20 16:03:37,522 906  [main] INFO  systemhealth.job.ScannerJob [ScannerJob.java:168] - group1.scannerjob will run at: Fri Nov 20 16:03:37 MST 2015 and repeat: -1 times, every 60 seconds
+2015-11-20 16:03:37,522 906  [main] INFO  systemhealth.job.ScannerJob [ScannerJob.java:173] - ------- Starting Scheduler ----------------
+2015-11-20 16:03:37,522 906  [main] INFO  org.quartz.core.QuartzScheduler [QuartzScheduler.java:575] - Scheduler MyScheduler_$_NON_CLUSTERED started.
+2015-11-20 16:03:37,522 906  [main] INFO  systemhealth.job.ScannerJob [ScannerJob.java:182] - ------- Started Scheduler -----------------
+2015-11-20 16:03:37,537 921  [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:70] - systemhealth.job.ScannerJob@1141b51d Directory to scan: H:/jsonfiles
+2015-11-20 16:03:37,537 921  [MyScheduler_QuartzSchedulerThread] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:71] - systemhealth.job.ScannerJob@1141b51d File extension filter: json
+2015-11-20 16:03:37,615 999  [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:95] - executing scanner job...
+2015-11-20 16:03:37,631 1015 [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:132] - Path = H:\jsonfiles\serverhealth.json
+2015-11-20 16:03:37,631 1015 [MyScheduler_Worker-1] DEBUG systemhealth.job.ScannerJob [ScannerJob.java:102] - File to process: H:\jsonfiles\serverhealth.json
+2015-11-20 16:03:37,834 1218 [pool-1-thread-1] DEBUG s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:50] - SystemHealthAnalyzer.run()
+2015-11-20 16:03:37,834 1218 [pool-1-thread-1] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:82] - DiskId G: disk percent free (6.910000) is below warning level (10.000000)
+2015-11-20 16:03:37,834 1218 [pool-1-thread-1] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:69] - DiskId H: disk percent free (1.570000) is below critical level (10.000000)
+2015-11-20 16:03:37,834 1218 [pool-1-thread-1] INFO  s.job.SystemHealthAnalyzer [SystemHealthAnalyzer.java:82] - DiskId H: disk percent free (1.570000) is below warning level (10.000000)

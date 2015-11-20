@@ -49,9 +49,9 @@ public class ScannerJob implements Job {
     private static final Logger LOGGER = LoggerFactory
             .getLogger(ScannerJob.class);
 
-    private static String directoryToScan = "";
+    private String directoryToScan = "";
 
-    private static String fileExtensionToFilter = "";
+    private String fileExtensionToFilter = "";
 
     private ServerThresholdConfigData thresholdConfigData = null;
 
@@ -86,7 +86,7 @@ public class ScannerJob implements Job {
 
     /*
      * (non-Javadoc)
-     *
+     * 
      * @see org.quartz.Job#execute(org.quartz.JobExecutionContext)
      */
     @Override
@@ -127,15 +127,15 @@ public class ScannerJob implements Job {
             ds = Files.newDirectoryStream(Paths.get(directory),
                     new Filter<Path>() {
 
-                @Override
-                public boolean accept(Path arg0) throws IOException {
-                    LOGGER.debug("Path = " + arg0.toString());
-                    // accept if file ends with the correct file
-                    // extension
-                    return arg0.toString().endsWith(
-                            fileExtensionToFilter);
-                }
-            });
+                        @Override
+                        public boolean accept(Path arg0) throws IOException {
+                            LOGGER.debug("Path = " + arg0.toString());
+                            // accept if file ends with the correct file
+                            // extension
+                            return arg0.toString().endsWith(
+                                    fileExtensionToFilter);
+                        }
+                    });
 
         } catch (IOException e) {
             LOGGER.error("Failed to scan directory, " + directory);
@@ -162,7 +162,7 @@ public class ScannerJob implements Job {
                     .startNow()
                     .withSchedule(
                             simpleSchedule().withIntervalInMinutes(1)
-                            .repeatForever()).build();
+                                    .repeatForever()).build();
 
             Date scheduleDate = scheduler.scheduleJob(job, trigger);
             LOGGER.info(job.getKey() + " will run at: " + scheduleDate
