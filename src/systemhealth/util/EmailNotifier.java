@@ -23,46 +23,10 @@ import org.slf4j.LoggerFactory;
  *
  */
 public class EmailNotifier {
-    
-    private static final Logger LOGGER = LoggerFactory.getLogger(EmailNotifier.class);
-    
-    final String username = "xxxx";
-    final String password = "xxxx";
-    
-    Session session = null;
-    Message message = null;
-    
-    public EmailNotifier() {
-        Properties props = new Properties();
-        props.put("mail.smtp.auth", "true");
-        props.put("mail.smtp.starttls.enable", "true");
-        props.put("mail.smtp.host", "smtp.gmail.com");
-        props.put("mail.smtp.port", "587");
 
-<<<<<<< HEAD
     private static final Logger LOGGER = LoggerFactory
             .getLogger(EmailNotifier.class);
-=======
-        session = Session.getInstance(props, new javax.mail.Authenticator() {
-            protected PasswordAuthentication getPasswordAuthentication() {
-                return new PasswordAuthentication(username, password);
-            }
-        });
-        
-    }
-    
-    /**
-     * 
-     * @param msg
-     * @param from
-     * @param recipients
-     * @param subject
-     */
-    public void sendMail(String msg, String from, String recipients, String subject) {
-        try {
->>>>>>> branch 'master' of https://github.com/phatsumo/systemhealth
 
-<<<<<<< HEAD
     String username = "xxxx";
     String password = "xxxx";
 
@@ -103,12 +67,6 @@ public class EmailNotifier {
             message.setFrom(new InternetAddress(from));
             message.addRecipients(Message.RecipientType.TO,
                     InternetAddress.parse(recipients));
-=======
-            Message message = new MimeMessage(session);
-            message.setFrom(new InternetAddress(from));
-            message.addRecipients(Message.RecipientType.TO,
-                InternetAddress.parse(recipients));
->>>>>>> branch 'master' of https://github.com/phatsumo/systemhealth
             message.setSubject(subject);
             message.setText(msg);
 
