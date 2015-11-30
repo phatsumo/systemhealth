@@ -1,22 +1,22 @@
 /**
- * 
+ *
  */
 package systemhealth.util;
 
 import java.io.File;
 
-import org.junit.Assert;
 import org.junit.After;
 import org.junit.AfterClass;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-
 import systemhealth.data.ServerHealthStat;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
 
 /**
  * @author 1062992
@@ -67,26 +67,31 @@ public class JSONHelperTest {
     public void testToServerHealthStat() {
 
         ServerHealthStat stat = createStat();
-        
+
         Assert.assertNotNull(stat);
 
         LOGGER.info("\nServer health stat: \n" + stat);
     }
-    
+
+    /**
+     * Test method for
+     * {@link systemhealth.util.JSONHelper#toJSON(ServerHealthStat)}
+     */
     @Test
     public void testToJSON() {
         ServerHealthStat stat = createStat();
-        
+
         try {
-            LOGGER.info("\n ServerHealthStat as JSON: \n" + JSONHelper.toJSON(stat));
+            LOGGER.info("\n ServerHealthStat as JSON: \n"
+                    + JSONHelper.toJSON(stat));
 
         } catch (JsonProcessingException e) {
             LOGGER.error("Failed to serialize ServerHealthStat: " + stat, e);
         }
     }
-    
+
     private ServerHealthStat createStat() {
-        
+
         return JSONHelper.toServerHealthStat(jsonFileToParse);
     }
 
