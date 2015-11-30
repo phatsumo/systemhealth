@@ -8,8 +8,11 @@ import org.slf4j.LoggerFactory;
 
 import systemhealth.data.ServerHealthStat;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.ObjectWriter;
+import com.fasterxml.jackson.databind.SerializationFeature;
 
 /**
  * @author 1062992
@@ -66,6 +69,22 @@ public class JSONHelper {
 
         return stat;
 
+    }
+    
+    /**
+     * 
+     * @param stat
+     * @return
+     * @throws JsonProcessingException 
+     */
+    public static String toJSON(ServerHealthStat stat) throws JsonProcessingException {
+        ObjectMapper objectMapper = new ObjectMapper();
+        
+        ObjectWriter writer = objectMapper.writer();
+        String valueAsString = writer.with(SerializationFeature.INDENT_OUTPUT).writeValueAsString(stat);
+        
+        return valueAsString;
+        
     }
 
 }

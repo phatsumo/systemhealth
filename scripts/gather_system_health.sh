@@ -41,8 +41,9 @@ do
     diskfree=$f5
     
     # calculate the percent drive space free
-    diskpercentfree=`echo "scale=2;$diskfree/$disksize*100.0" | bc`
-    
+    diskpercentfree=`echo "$diskfree/$disksize*100.0" | bc -l`
+    #format to 2 digit after decimal
+    diskpercentfree=`printf "%.2f" $diskpercentfree`
     if [ "$counter" = "$numberLine" ]; then
         echo -e "\t\t{\"deviceID\": \"$diskid\", \"totalSizeKB\": $disksize, \"freeSizeKB\": $diskfree, \"percentDiskFree\": $diskpercentfree}"
     else
