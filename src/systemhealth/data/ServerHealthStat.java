@@ -22,6 +22,8 @@ public class ServerHealthStat {
 
     private float serverUpTimeDays;
 
+    private float percentMemFree;
+
     /**
      * @return the serverName
      */
@@ -93,8 +95,24 @@ public class ServerHealthStat {
             sb.append("percentDiskFree=" + disk.getPercentDiskFree() + "\n");
         }
         sb.append("serverUpTimeDays=" + serverUpTimeDays + ",\n");
-        sb.append("percentCPUUsage=" + percentCPUUsage + "\n");
+        sb.append("percentCPUUsage=" + percentCPUUsage + ",\n");
+        sb.append("percentMemFree=" + percentMemFree + "\n");
         return sb.toString();
+    }
+
+    /**
+     * @return the percentMemFree
+     */
+    public float getPercentMemFree() {
+        return percentMemFree;
+    }
+
+    /**
+     * @param percentMemFree
+     *            the percentMemFree to set
+     */
+    public void setPercentMemFree(float percentMemFree) {
+        this.percentMemFree = percentMemFree;
     }
 
 }

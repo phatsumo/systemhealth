@@ -2,16 +2,20 @@
 <serverThresholdConfigData>
     <serverThreshold>
         <serverName>AURD-AI168889</serverName>
-        <warningDiskFreePercent>10</warningDiskFreePercent>
-        <criticalDiskFreePercent>5</criticalDiskFreePercent>
-        <warningCPUUsagePercent>80</warningCPUUsagePercent>
-        <criticalCPUUsagePercent>95</criticalCPUUsagePercent>
+        <diskThreshold deviceId="C:" diskPercentFreeWarningLevel="10.0" diskPercentFreeCriticalLevel="5.0"/>
+        <diskThreshold deviceId="G:" diskPercentFreeWarningLevel="10.0" diskPercentFreeCriticalLevel="5.0"/>
+        <warningCPUUsagePercent>80.0</warningCPUUsagePercent>
+        <criticalCPUUsagePercent>95.0</criticalCPUUsagePercent>
+        <warningMemFreePercent>10.0</warningMemFreePercent>
+        <criticalMemFreePercent>5.0</criticalMemFreePercent>
     </serverThreshold>
     <serverThreshold>
         <serverName>ABC</serverName>
-        <warningDiskFreePercent>10</warningDiskFreePercent>
-        <criticalDiskFreePercent>5</criticalDiskFreePercent>
-        <warningCPUUsagePercent>80</warningCPUUsagePercent>
-        <criticalCPUUsagePercent>95</criticalCPUUsagePercent>
+        <diskThreshold deviceId="DEF" diskPercentFreeWarningLevel="10.0" diskPercentFreeCriticalLevel="5.0"/>
+        <diskThreshold deviceId="XYZ" diskPercentFreeWarningLevel="10.0" diskPercentFreeCriticalLevel="5.0"/>
+        <warningCPUUsagePercent>80.0</warningCPUUsagePercent>
+        <criticalCPUUsagePercent>95.0</criticalCPUUsagePercent>
+        <warningMemFreePercent>10.0</warningMemFreePercent>
+        <criticalMemFreePercent>5.0</criticalMemFreePercent>
     </serverThreshold>
 </serverThresholdConfigData>
