@@ -56,11 +56,17 @@ done < tmpdisk.out
 echo -e "\t],"
 
 #gather server up time
-uptime=`uptime`
-serverUpTimeDays=`echo $uptime|awk '{print $3}'`
+serverUpTimeDays=`cat /proc/uptime | awk '{print $1/86400}'`
+serverUpTimeDays=`printf "%.2f" $serverUpTimeDays`
+
 echo -e "\t\"serverUpTimeDays\": $serverUpTimeDays,"
 
 #get cpu percent usage
 cpuPercentUsage=`top -bn 2 -d 0.01 | grep '^%Cpu' | tail -n 1 | gawk '{print $2+$4+$6}'`
-echo -e "\t\"percentCPUUsage\": $cpuPercentUsage\n}"
+cpuPercentUsage=`printf "%.2f" $cpuPercentUsage`
+echo -e "\t\"percentCPUUsage\": $cpuPercentUsage,"
 
+#get percent physical memory free
+percentmemfree=`free -k|grep Mem| awk '{print (($4 + $6 + $7)/$2)*100}'`
+percentmemfree=`printf "%.2f" $percentmemfree`
+echo -e "\t\"percentMemFree\": $percentmemfree\n}"
