@@ -34,7 +34,7 @@ public class JSONHelperTest {
      */
     @BeforeClass
     public static void setUpBeforeClass() throws Exception {
-        jsonFileToParse = new File("serverhealth.json");
+        jsonFileToParse = new File("./test-resources/serverhealth_windows.json");
     }
 
     /**
