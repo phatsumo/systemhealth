@@ -60,6 +60,8 @@ public class SystemHealthAnalyzer implements Runnable {
             return;
         }
 
+        StringBuilder stringBuilder = new StringBuilder();
+
         // check disk usage level
         for (Disk disk : serverHealthStat.getDisks()) {
 
@@ -71,8 +73,7 @@ public class SystemHealthAnalyzer implements Runnable {
                 if (diskThreshold.getDiskPercentFreeCriticalLevel() >= disk
                         .getPercentDiskFree()) {
                     // need to send critical or urgent email to SA, disk is
-                    // almost
-                    // full
+                    // almost full
                     LOGGER.info(String
                             .format("DiskId %s disk percent free (%f) is below critical level (%f)",
                                     disk.getDeviceID(), disk
@@ -80,9 +81,8 @@ public class SystemHealthAnalyzer implements Runnable {
                                     diskThreshold
                                             .getDiskPercentFreeCriticalLevel()));
 
-                    // TODO - We've breach critical disk usage mark. Just send
-                    // the
-                    // email notification
+                    // We've breach critical disk usage mark. Just send the
+                    // email notification.
 
                 }
 
@@ -96,9 +96,10 @@ public class SystemHealthAnalyzer implements Runnable {
                                     diskThreshold
                                             .getDiskPercentFreeWarningLevel()));
 
-                    // TODO - mark that warning email needs to be sent: indicate
-                    // in
-                    // email servername and the problem.
+                    /*
+                     * mark that warning email needs to be sent: indicate in
+                     * email servername and the problem.
+                     */
 
                 }
             }

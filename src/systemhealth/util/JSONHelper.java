@@ -44,7 +44,7 @@ public class JSONHelper {
 
             stat = objectMapper.readValue(jsonFile,
                     new TypeReference<ServerHealthStat>() {
-            });
+                    });
 
             // keep the commented out section below, it illustrates an alternate
             // way for deserializing the json file to java object.
@@ -70,21 +70,25 @@ public class JSONHelper {
         return stat;
 
     }
-    
+
     /**
+     * Method serializes the {@link ServerHealthStat} to JSON format.
      * 
      * @param stat
-     * @return
-     * @throws JsonProcessingException 
+     *            the ServerHealthStat
+     * @return JSON representation of ServerHealthStat
+     * @throws JsonProcessingException
      */
-    public static String toJSON(ServerHealthStat stat) throws JsonProcessingException {
+    public static String toJSON(ServerHealthStat stat)
+            throws JsonProcessingException {
         ObjectMapper objectMapper = new ObjectMapper();
-        
+
         ObjectWriter writer = objectMapper.writer();
-        String valueAsString = writer.with(SerializationFeature.INDENT_OUTPUT).writeValueAsString(stat);
-        
+        String valueAsString = writer.with(SerializationFeature.INDENT_OUTPUT)
+                .writeValueAsString(stat);
+
         return valueAsString;
-        
+
     }
 
 }
