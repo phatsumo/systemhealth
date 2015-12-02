@@ -11,6 +11,7 @@ import systemhealth.data.DiskThreshold;
 import systemhealth.data.ServerHealthStat;
 import systemhealth.data.ServerThreshold;
 import systemhealth.data.ServerThresholdConfigData;
+import systemhealth.util.EmailNotifier;
 
 /**
  * Runnable that checks performance levels for disks and CPU in
@@ -61,7 +62,10 @@ public class SystemHealthAnalyzer implements Runnable {
         }
 
         StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append("Hostname: " + serverHealthStat.getServerName()
+                + "\n\n");
 
+        boolean needToNotify = false;
         // check disk usage level
         for (Disk disk : serverHealthStat.getDisks()) {
 
@@ -80,13 +84,18 @@ public class SystemHealthAnalyzer implements Runnable {
                                             .getPercentDiskFree(),
                                     diskThreshold
                                             .getDiskPercentFreeCriticalLevel()));
+                    needToNotify = true;
 
                     // We've breach critical disk usage mark. Just send the
                     // email notification.
+                    stringBuilder.append("CRITICAL: Disk, ID = "
+                            + disk.getDeviceID() + " percent free disk space ["
+                            + disk.getPercentDiskFree()
+                            + "%] is below the critical threshold ["
+                            + diskThreshold.getDiskPercentFreeCriticalLevel()
+                            + "%].\n\n");
 
-                }
-
-                if (diskThreshold.getDiskPercentFreeWarningLevel() >= disk
+                } else if (diskThreshold.getDiskPercentFreeWarningLevel() >= disk
                         .getPercentDiskFree()) {
                     // need to send warning email
                     LOGGER.info(String
@@ -100,6 +109,16 @@ public class SystemHealthAnalyzer implements Runnable {
                      * mark that warning email needs to be sent: indicate in
                      * email servername and the problem.
                      */
+                    needToNotify = true;
+
+                    // We've breach critical disk usage mark. Just send the
+                    // email notification.
+                    stringBuilder.append("WARNING: Disk, ID = "
+                            + disk.getDeviceID() + " percent free disk space ["
+                            + disk.getPercentDiskFree()
+                            + "%] is below the warning threshold ["
+                            + diskThreshold.getDiskPercentFreeWarningLevel()
+                            + "%].\n\n");
 
                 }
             }
@@ -110,21 +129,49 @@ public class SystemHealthAnalyzer implements Runnable {
         if (serverThreshold.getCriticalCPUUsagePercent() >= serverHealthStat
                 .getPercentCPUUsage()) {
 
-        }
+            needToNotify = true;
 
-        if (serverThreshold.getWarningCPUUsagePercent() >= serverHealthStat
+            stringBuilder.append("CRITICAL: CPU percent utilization ["
+                    + serverHealthStat.getPercentCPUUsage()
+                    + "%] has exceeded the critical threshold level ["
+                    + serverThreshold.getCriticalCPUUsagePercent() + "%].\n\n");
+
+        } else if (serverThreshold.getWarningCPUUsagePercent() >= serverHealthStat
                 .getPercentCPUUsage()) {
+            needToNotify = true;
 
+            stringBuilder.append("WARNING: CPU percent utilization ["
+                    + serverHealthStat.getPercentCPUUsage()
+                    + "%] has exceeded the warning threshold level ["
+                    + serverThreshold.getWarningCPUUsagePercent() + "%].\n\n");
         }
 
         // check physical memory free
         if (serverThreshold.getCriticalMemFreePercent() >= serverHealthStat
                 .getPercentMemFree()) {
 
+            needToNotify = true;
+            stringBuilder.append("CRITICAL: Memory percent free ["
+                    + serverHealthStat.getPercentMemFree()
+                    + "%] is below the critical threshold level ["
+                    + serverThreshold.getCriticalMemFreePercent() + "%].\n\n");
+        } else if (serverThreshold.getWarningMemFreePercent() >= serverHealthStat
+                .getPercentMemFree()) {
+            needToNotify = true;
+            stringBuilder.append("WARNING: Memory percent free ["
+                    + serverHealthStat.getPercentMemFree()
+                    + "%] is below the warning threshold level ["
+                    + serverThreshold.getWarningMemFreePercent() + "%].\n\n");
         }
 
-        if (serverThreshold.getWarningMemFreePercent() >= serverHealthStat
-                .getPercentMemFree()) {
+        if (needToNotify) {
+            EmailNotifier emailNotifier = new EmailNotifier();
+            String subject = "Attention! " + serverHealthStat.getServerName()
+                    + " system performance is in degraded mode.";
+            String msg = stringBuilder.toString();
+            String from = "phatsumo@gmail.com";
+            String recipients = "dragons236@gmail.com";
+            emailNotifier.sendMail(msg, from, recipients, subject);
 
         }
 
