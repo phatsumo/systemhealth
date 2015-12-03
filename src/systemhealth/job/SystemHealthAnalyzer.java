@@ -44,7 +44,7 @@ public class SystemHealthAnalyzer implements Runnable {
 
     /*
      * (non-Javadoc)
-     * 
+     *
      * @see java.lang.Runnable#run()
      */
     @Override
@@ -69,7 +69,7 @@ public class SystemHealthAnalyzer implements Runnable {
         // check disk usage level
         for (Disk disk : serverHealthStat.getDisks()) {
 
-            // TODO - need to find the DiskThreshold by deviceId
+            // need to find the DiskThreshold by deviceId
             DiskThreshold diskThreshold = serverThreshold
                     .findDiskThresholdById(disk.getDeviceID());
             if (diskThreshold != null) {
@@ -81,9 +81,9 @@ public class SystemHealthAnalyzer implements Runnable {
                     LOGGER.info(String
                             .format("DiskId %s disk percent free (%f) is below critical level (%f)",
                                     disk.getDeviceID(), disk
-                                            .getPercentDiskFree(),
+                                    .getPercentDiskFree(),
                                     diskThreshold
-                                            .getDiskPercentFreeCriticalLevel()));
+                                    .getDiskPercentFreeCriticalLevel()));
                     needToNotify = true;
 
                     // We've breach critical disk usage mark. Just send the
@@ -101,9 +101,9 @@ public class SystemHealthAnalyzer implements Runnable {
                     LOGGER.info(String
                             .format("DiskId %s disk percent free (%f) is below warning level (%f)",
                                     disk.getDeviceID(), disk
-                                            .getPercentDiskFree(),
+                                    .getPercentDiskFree(),
                                     diskThreshold
-                                            .getDiskPercentFreeWarningLevel()));
+                                    .getDiskPercentFreeWarningLevel()));
 
                     /*
                      * mark that warning email needs to be sent: indicate in
