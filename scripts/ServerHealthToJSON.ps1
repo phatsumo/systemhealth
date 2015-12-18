@@ -78,8 +78,9 @@ foreach ( $args in $file) {
 }
 
 #change the path as appropriate
-$tempfile = "H:\IRAD\serverhealth.json.tmp"
-$outputfile = "H:\IRAD\serverhealth.json"
+$outputfilename = $systemname + "_health.json"
+$tempfile = "H:\IRAD\" + $outputfilename + ".tmp"
+$outputfile = "H:\IRAD\" + $outputfilename
 
 write-host "writing out to $tempfile"
 $jsonOutput | out-file $tempfile
